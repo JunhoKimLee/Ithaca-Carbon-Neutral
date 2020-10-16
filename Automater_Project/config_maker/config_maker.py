@@ -23,11 +23,11 @@ def rewrite(line, var_list, config):
   return s
 
 # paths
-file = r'C:\Users\Junho Kim-Lee\Documents\ICN\Ithaca-Carbon-Neutral\Automater_Project\user_inputs\base_case.cfg'
+file = r'user_inputs\base_case.cfg'
+output_cons = r'configs\cons_base.txt'
+output_win = r'configs\window_base.txt'
 default_cons = r'default_cons.txt'
 default_win = r'default_win.txt'
-output_cons = r'C:\Users\Junho Kim-Lee\Documents\ICN\Ithaca-Carbon-Neutral\Automater_Project\configs\cons_base.txt'
-output_win = r'C:\Users\Junho Kim-Lee\Documents\ICN\Ithaca-Carbon-Neutral\Automater_Project\configs\window_base.txt'
 
 # create config
 config = ConfigParser()

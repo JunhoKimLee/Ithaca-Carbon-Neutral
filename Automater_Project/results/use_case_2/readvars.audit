@@ -1,8 +1,0 @@
- ReadVarsESO
- processing:C:\Users\Junho Kim-Lee\Documents\ICN\Ithaca-Carbon-Neutral\Automater_Project\results\use_case_2\Tester_model.rvi
- input file:C:\Users\Junho Kim-Lee\Documents\ICN\Ithaca-Carbon-Neutral\Automater_Project\results\use_case_2\Tester_modelout.eso
- output file:C:\Users\Junho Kim-Lee\Documents\ICN\Ithaca-Carbon-Neutral\Automater_Project\results\use_case_2\Tester_modelout.csv
- getting all vars from:C:\Users\Junho Kim-Lee\Documents\ICN\Ithaca-Carbon-Neutral\Automater_Project\results\use_case_2\Tester_modelout.eso
-  number variables requested for output=           2
- ReadVars Run Time=00hr 00min  0.02sec
- ReadVarsESO program completed successfully.
