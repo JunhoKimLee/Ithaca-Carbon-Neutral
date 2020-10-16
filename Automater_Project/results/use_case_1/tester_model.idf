@@ -1,0 +1,680 @@
+! ----  This file was generated with Archsim v.4.3.2.1
+
+Version,8.4;
+
+ProgramControl,
+4; !- Number of Threads Allowed
+
+RunPeriod,
+  Archsim,                 !- Name
+  1,                       !- Begin Month
+  1,                       !- Begin Day of Month
+  12,                      !- End Month
+  31,                      !- End Day of Month
+  UseWeatherFile,          !- Day of Week for Start Day
+  No,                      !- Use Weather File Holidays and Special Days
+  No,                      !- Use Weather File Daylight Saving Period
+  Yes,                     !- Apply Weekend Holiday Rule
+  Yes,                     !- Use Weather File Rain Indicators
+  Yes,                     !- Use Weather File Snow Indicators
+  1;                       !- Number of Times Runperiod to be Repeated
+
+RunPeriodControl:DaylightSavingTime,
+  Last Sunday in March,    !- Start Date
+  Last Sunday in October;  !- End Date
+
+Site:GroundTemperature:BuildingSurface,14,14,14,14,14,14,14,14,14,14,14,14;
+
+Site:GroundReflectance,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2;
+
+Site:GroundReflectance:SnowModifier,
+  1.0,                     !- Ground Reflected Solar Modifier
+  1.0;                     !- Daylighting Ground Reflected Solar Modifier
+
+SimulationControl,
+  No,                      !- Do Zone Sizing Calculation
+  No,                      !- Do System Sizing Calculation
+  No,                      !- Do Plant Sizing Calculation
+  No,                      !- Run Simulation for Sizing Periods
+  Yes;                     !- Run Simulation for Weather File Run Periods
+
+
+
+ConvergenceLimits,
+  1,                       !- Minimum System Timestep {minutes}
+  50;                      !- Maximum HVAC Iterations
+
+ScheduleTypeLimits,
+  Any Number;              !- Name
+
+ScheduleTypeLimits,
+  Fraction,                !- Name
+  0.0,                     !- Lower Limit Value
+  1.0,                     !- Upper Limit Value
+  CONTINUOUS;              !- Numeric Type
+
+ScheduleTypeLimits,
+  Temperature,             !- Name
+  -60,                     !- Lower Limit Value
+  200,                     !- Upper Limit Value
+  CONTINUOUS;              !- Numeric Type
+
+ScheduleTypeLimits,
+  Control Type,            !- Name
+  0,                       !- Lower Limit Value
+  4,                       !- Upper Limit Value
+  DISCRETE;                !- Numeric Type
+
+ScheduleTypeLimits,
+  On/Off,                  !- Name
+  0,                       !- Lower Limit Value
+  1,                       !- Upper Limit Value
+  DISCRETE;                !- Numeric Type
+
+Schedule:Constant,
+  On,                      !- Name
+  On/Off,                  !- Schedule Type Limits Name
+  1;                       !- Value
+
+Schedule:Constant,
+  Off,                     !- Name
+  On/Off,                  !- Schedule Type Limits Name
+  0;                       !- Value
+
+
+GlobalGeometryRules,
+  LowerLeftCorner,         !- Starting Vertex Position
+  CounterClockWise,        !- Vertex Entry Direction
+  World;                !- Coordinate System
+
+! -------------------------ERL SENSORS--------------------------
+
+EnergyManagementSystem:Sensor,                                             
+  OutdoorTemp, !- Name                                         
+  Environment, !- Output:Variable Index Key Name               
+  Site Outdoor Air Drybulb Temperature; !- Output:Variable Name
+EnergyManagementSystem:Sensor,                                             
+  OutdoorRelHumid, !- Name                                         
+  Environment, !- Output:Variable Index Key Name               
+  Site Outdoor Air Relative Humidity; !- Output:Variable Name
+
+
+Output:EnergyManagementSystem,
+  Verbose,                 !- Actuator Availability Dictionary Reporting
+  Verbose,                 !- Internal Variable Availability Dictionary Reporting
+  Verbose;                 !- EMS Runtime Language Debug Output Level
+
+
+
+ShadowCalculation,
+  AverageOverDaysInFrequency,  !- Calculation Method
+  20,                      !- Calculation Frequency
+  15000,                   !- Maximum Figures in Shadow Overlap Calculations
+  SutherlandHodgman,       !- Polygon Clipping Algorithm
+  SimpleSkyDiffuseModeling;!- Sky Diffuse Modeling Algorithm
+
+Building,
+  Building,                !- Name
+  0,                       !- North Axis [deg]
+  Suburbs,                 !- Terrain
+  .04,                     !- Loads Convergence Tolerance Value
+  .4,                      !- Temperature Convergence Tolerance Value {deltaC}
+  FullExterior,            !- Solar Distribution   should be  FullInteriorAndExterior
+  25,                      !- Maximum Number of Warmup Days
+  ;                        !- Minimum Number of Warmup Days
+
+HeatBalanceAlgorithm,
+    ConductionTransferFunction,  !- Algorithm
+    200,                     !- Surface Temperature Upper Limit {C}
+    0.1,                     !- Minimum Surface Convection Heat Transfer Coefficient Value {W/m2-K}
+    1000;                    !- Maximum Surface Convection Heat Transfer Coefficient Value {W/m2-K}
+
+Timestep,4;
+
+SurfaceConvectionAlgorithm:Inside,TARP;
+
+SurfaceConvectionAlgorithm:Outside,DOE-2;
+
+! ------------ CONSTRUCTIONS 
+
+! defaultConstruction Type: Facade
+Construction, defaultConstruction,
+defaultMat_0.25_defaultConstruction;
+
+Construction, defaultConstruction_FLIPPED,
+defaultMat_0.25_defaultConstruction;
+
+
+
+! Materials
+!- Material: defaultMat Type: Concrete
+Material, defaultMat_0.25_defaultConstruction ,                !- Material name 
+ Rough,                                         !- Roughness
+ 0.25,                                         !- Thickness {m}
+ 2.3,                                          !- Conductivity {w/m-K}
+ 2400,                                          !- Density {kg/m3}
+ 840,                                          !- Specific Heat {J/kg-K}
+ 0.9,                                           !- Thermal Emittance
+ 0.7,                                           !- Solar Absorptance
+ 0.7;                                           !- Visible Absorptance
+
+
+
+
+! ------------ GLAZING  
+
+! defaultGlazing Type: Single
+Construction, defaultGlazing,
+defaultGlazingMat_0.006_defaultGlazing;
+
+Construction, defaultGlazing_FLIPPED,
+defaultGlazingMat_0.006_defaultGlazing;
+
+
+
+! Materials
+WindowMaterial:Glazing,defaultGlazingMat_0.006_defaultGlazing,                         !- Generic CLEAR 3MM
+ SpectralAverage,                               !- Optical data type {SpectralAverage or Spectral}
+ SpectralAverage,                                              !- Name of spectral data set when Optical Data Type = Spectral
+ 0.006,                                          !- Thickness {m}
+ 0.68,                                          !- Solar transmittance at normal incidence
+ 0.09,                                          !- Solar reflectance at normal incidence: front side
+ 0.1,                                          !- Solar reflectance at normal incidence: back side
+ 0.81,                                          !- Visible transmittance at normal incidence
+ 0.11,                                          !- Visible reflectance at normal incidence: front side
+ 0.12,                                          !- Visible reflectance at normal incidence: back side
+ 0,                                            !- IR transmittance at normal incidence
+ 0.2,                                           !- IR emissivity: front side
+ 0.2,                                           !- IR emissivity: back side
+ 0.9,                                            !- Conductivity {W/m-K}
+ 1;                                             !- Dirt Correction Factor for Solar and Visible Transmittance
+
+
+
+
+
+! ------------ SCHEDULES  
+
+Schedule:Year,occResidential,
+Fraction,
+occResidential0,1,1,12,31;
+
+Schedule:Week:Daily, occResidential0,
+  occResidential, !- Sunday Schedule:Day Name
+  occResidential, !- Monday Schedule:Day Name
+  occResidential, !- Tuesday Schedule:Day Name
+  occResidential, !- Wednesday Schedule:Day Name
+  occResidential, !- Thursday Schedule:Day Name
+  occResidential, !- Friday Schedule:Day Name
+  occResidential, !- Saturday Schedule:Day Name
+  occResidential, !- Holiday Schedule:Day Name
+  occResidential, !- SummerDesignDay Schedule:Day Name
+  occResidential, !- WinterDesignDay Schedule:Day Name
+  occResidential, !- CustomDay1 Schedule:Day Name
+  occResidential; !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,AllOn,
+Fraction,
+AllOn0,1,1,12,31;
+
+Schedule:Week:Daily, AllOn0,
+  AllOn, !- Sunday Schedule:Day Name
+  AllOn, !- Monday Schedule:Day Name
+  AllOn, !- Tuesday Schedule:Day Name
+  AllOn, !- Wednesday Schedule:Day Name
+  AllOn, !- Thursday Schedule:Day Name
+  AllOn, !- Friday Schedule:Day Name
+  AllOn, !- Saturday Schedule:Day Name
+  AllOn, !- Holiday Schedule:Day Name
+  AllOn, !- SummerDesignDay Schedule:Day Name
+  AllOn, !- WinterDesignDay Schedule:Day Name
+  AllOn, !- CustomDay1 Schedule:Day Name
+  AllOn; !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,lightsResidential,
+Fraction,
+lightsResidential0,1,1,12,31;
+
+Schedule:Week:Daily, lightsResidential0,
+  lightsResidential, !- Sunday Schedule:Day Name
+  lightsResidential, !- Monday Schedule:Day Name
+  lightsResidential, !- Tuesday Schedule:Day Name
+  lightsResidential, !- Wednesday Schedule:Day Name
+  lightsResidential, !- Thursday Schedule:Day Name
+  lightsResidential, !- Friday Schedule:Day Name
+  lightsResidential, !- Saturday Schedule:Day Name
+  lightsResidential, !- Holiday Schedule:Day Name
+  lightsResidential, !- SummerDesignDay Schedule:Day Name
+  lightsResidential, !- WinterDesignDay Schedule:Day Name
+  lightsResidential, !- CustomDay1 Schedule:Day Name
+  lightsResidential; !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,equipResidential,
+Fraction,
+equipResidential0,1,1,12,31;
+
+Schedule:Week:Daily, equipResidential0,
+  equipResidential, !- Sunday Schedule:Day Name
+  equipResidential, !- Monday Schedule:Day Name
+  equipResidential, !- Tuesday Schedule:Day Name
+  equipResidential, !- Wednesday Schedule:Day Name
+  equipResidential, !- Thursday Schedule:Day Name
+  equipResidential, !- Friday Schedule:Day Name
+  equipResidential, !- Saturday Schedule:Day Name
+  equipResidential, !- Holiday Schedule:Day Name
+  equipResidential, !- SummerDesignDay Schedule:Day Name
+  equipResidential, !- WinterDesignDay Schedule:Day Name
+  equipResidential, !- CustomDay1 Schedule:Day Name
+  equipResidential; !- CustomDay2 Schedule:Day Name
+
+Schedule:Day:Hourly, occResidential, Fraction,1,1,1,1,1,1,0.8,0.6,0.4,0.4,0.4,0.6,0.8,0.6,0.4,0.4,0.6,0.8,0.8,0.8,0.8,1,1,1;
+
+Schedule:Day:Hourly, AllOn, Fraction,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+
+Schedule:Day:Hourly, lightsResidential, Fraction,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0;
+
+Schedule:Day:Hourly, equipResidential, Fraction,0.1,0.1,0.1,0.1,0.1,0.1,0.5,1,0.5,0.5,0.5,1,1,0.5,0.5,0.5,1,1,1,1,0.5,0.5,0.5,0.1;
+
+
+
+
+!------------------------------------------------ ZONE ----------------------------------------------------
+
+Zone,
+  construction,            !- Name
+  0,                       !- Rotation [deg]
+  0,                       !- X origin [m]
+  0,                       !- Y origin [m]
+  0,                       !- Z origin [m]
+  1,                       !- Type
+  1.0,                       !- Multiplier
+  ,                        !- Ceiling Height [m]
+  926.879630820892,                   !- Volume [m3]
+  185.375926164178,                   !- Area [m2]
+  TARP,                    !- Zone Inside Convection Algorithm
+  DOE-2;                   !- Zone Outside Convection Algorithm
+
+! ------------------------ PEOPLE
+People,
+    People construction,                 !- Name
+    construction,            !- Zone or ZoneList Name
+    occResidential,        !- Number of People Schedule Name
+    People/Area,                  !- Number of People Calculation Method
+    ,                       !- Number of People
+    0.025,                        !- People per Zone Floor Area {person/m2}
+    ,                        !- Zone Floor Area per Person {m2/person}
+    0.3,                     !- Fraction Radiant
+    AUTOCALCULATE,           !- Sensible Heat Fraction
+    constructionPeopleActivity,                    !- Activity Level Schedule Name
+    0.0000000382,            !- Carbon Dioxide Generation Rate {m3/s-W}
+    No,                      !- Enable ASHRAE 55 Comfort Warnings
+    ZoneAveraged,            !- Mean Radiant Temperature Calculation Type
+    ,                        !- Surface Name/Angle Factor List Name
+    constructionWorkEfficiency,  !- Work Efficiency Schedule Name
+    DynamicClothingModelASHRAE55,  !- Clothing Insulation Calculation Method
+    ,                        !- Clothing Insulation Calculation Method Schedule Name
+    ,                        !- Clothing Insulation Schedule Name
+    constructionAirVelocity,!- Air Velocity Schedule Name
+    AdaptiveASH55;           !- Thermal Comfort Model 1 Type
+
+Schedule:Constant, constructionPeopleActivity, Any Number, 125.28; ! - Watts per person, uses Metabolic Rate input (1 met = 58 W/m2) and assumes adult body surface area of 1.8 m2
+Schedule:Constant, constructionAirVelocity, Any Number, 0.2;
+Schedule:Constant, constructionWorkEfficiency, Any Number, 0;
+
+
+! ------------------------ EQUIPMENT
+ElectricEquipment,
+  construction Equipment 1,!- Name
+  construction,            !- Zone or ZoneList Name
+  equipResidential,                    !- Schedule Name
+  Watts/Area,          !- Design Level Calculation Method
+  ,                !- Design Level [W]
+  2,                        !- Watts per Zone Floor Area [W/m2]
+  ,                        !- Watts per Person [W/person]
+  0,                       !- Fraction Latent
+  .2,                      !- Fraction Radiant
+  0,                       !- Fraction Lost
+  ;                        !- End-Use Subcategory
+
+! ------------------------ LIGHTS
+Lights,
+  construction General lighting,   !- Name
+  construction,                    !- Zone or ZoneList Name
+  lightsResidential,          !- Schedule Name
+  Watts/Area,              !- Design Level Calculation Method
+  ,                        !- Lighting Level [W]
+  9.5,         !- Watts per Zone Floor Area [W/m2]
+  ,                        !- Watts per Person [W/person]
+  0,                       !- Return Air Fraction
+  .42,                     !- Fraction Radiant
+  .18,                     !- Fraction Visible
+  1,                       !- Fraction Replaceable
+  ;                        !- End-Use Subcategory
+
+
+! ------------------------ DAYLIGHT CONTROLS
+Daylighting:Controls,
+construction,            !-Zone Name
+1,                       !-Total Daylighting Reference Points
+7.73904565830614,                  !-X - Coordinate of First Reference Point {m}
+6.84971546036057,                  !-Y - Coordinate of First Reference Point {m}
+0.85,                      !-Z - Coordinate of First Reference Point {m}
+,                        !-X - Coordinate of Second Reference Point {m}
+,                        !-Y - Coordinate of Second Reference Point {m}
+,                        !-Z - Coordinate of Second Reference Point {m}
+1,                       !-Fraction of Zone Controlled by First Reference Point
+0,                       !-Fraction of Zone Controlled by Second Reference Point
+200,                     !-Illuminance Setpoint at First Reference Point {lux}
+200,                     !-Illuminance Setpoint at Second Reference Point {lux}
+1 ,                       !-Lighting control type {1=continuous,2=stepped,3=continuous/off}
+0,                       !-Glare Calculation Azimuth Angle of View Direction Clockwise from Zone y-Axis {deg}
+22,                      !-Maximum Allowable Discomfort Glare Index
+0.1,                     !-Minimum Input Power Fraction for Continuous Dimming Control
+0.1,                     !-Minimum Light Output Fraction for Continuous Dimming Control
+3,                       !-Number of Stepped Control Steps
+1;                       !-Probability Lighting will be Reset When Needed in Manual Stepped Control
+
+! ------------------------ HVAC
+
+Schedule:Constant,
+  constructionHeating_SP_Sch, !- Name
+  Temperature, !- Schedule Type Limits Name
+  10; !- Hourly Value
+
+Schedule:Constant,
+  constructionCooling_SP_Sch, !- Name
+  Temperature, !- Schedule Type Limits Name
+  26; !- Hourly Value
+
+ZoneControl:Thermostat,
+  construction Thermostat, !- Name
+  construction,            !- Zone or ZoneList Name
+  constructionZoneControlTypeSched, !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+  Dual Setpoint - Zone construction;  !- Control 1 Name
+
+Schedule:Constant,
+  constructionZoneControlTypeSched, !- Name
+  Any Number, !- Schedule Type Limits Name
+  4; !- Hourly Value
+
+ThermostatSetpoint:DualSetpoint,
+  Dual Setpoint - Zone construction,  !- Name
+  constructionHeating_SP_Sch,  !- Heating Setpoint Temperature Schedule Name
+  constructionCooling_SP_Sch;  !- Cooling Setpoint Temperature Schedule Name
+
+ZoneHVAC:EquipmentConnections,
+  construction,            !- Zone Name
+  construction Equipment,  !- Zone Conditioning Equipment List Name
+  construction Inlets,     !- Zone Air Inlet Node or NodeList Name
+  ,                        !- Zone Air Exhaust Node or NodeList Name
+  Node construction Zone,  !- Zone Air Node Name
+  Node construction Out;   !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  construction Equipment,  !- Name
+  ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+  construction Ideal Loads Air,  !- Zone Equipment 1 Name
+  1,                       !- Zone Equipment 1 Cooling Sequence
+  1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+
+NodeList,
+  construction Inlets,     !- Name
+  Node construction In;    !- Node 1 Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  construction Ideal Loads Air,  !- Name
+  ,                        !- Availability Schedule Name
+  Node construction In,    !- Zone Supply Air Node Name
+  ,                        !- Zone Exhaust Air Node Name
+  30,                      !- Maximum Heating Supply Air Temperature {C}
+  18,                      !- Minimum Cooling Supply Air Temperature {C}
+  0.01,                    !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+  0.008,                   !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+  NoLimit,                 !- Heating Limit
+  100,                        !- Maximum Heating Air Flow Rate [m3/s]
+  ,        				   !- Maximum Sensible Heating Capacity [W]
+  NoLimit,                 !- Cooling Limit
+  100 ,                        !- Maximum Cooling Air Flow Rate [m3/s]
+  ,                        !- Maximum Total Cooling Capacity [W]
+  AllOn,  !- Heating Availability Schedule Name
+  AllOn,  !- Cooling Availability Schedule Name
+  None,                    !- Dehumidification Control Type
+  ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+  None,                    !- Humidification Control Type
+  constructionMinFreshAir,                        !- Design Specification Outdoor Air Object Name
+  construction_OutDoorInlet,                        !- Outdoor Air Inlet Node Name
+  OccupancySchedule,                        !- Demand Controlled Ventilation Type
+  NoEconomizer,                        !- Outdoor Air Economizer Type
+  Sensible,                        !- Heat Recovery Type
+  0.6,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+  0.65;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+
+ZoneControl:Humidistat,
+    constructionHumidistat,                  !-Name
+    construction,                   !-Zone Name
+    constructionHumidMin,                !-Humidifying Relative Humidity Setpoint Schedule Name
+    constructionHumidMax; !-Dehumidifying Relative Humidity Setpoint Schedule Name
+
+Schedule:Constant,
+    constructionHumidMin,                !- Name
+    Any Number,              !- Schedule Type Limits Name
+    20;                      !- Hourly Value
+
+Schedule:Constant,
+    constructionHumidMax,                !- Name
+    Any Number,              !- Schedule Type Limits Name
+    80;                      !- Hourly Value
+
+DesignSpecification:OutdoorAir,
+  constructionMinFreshAir,                  !- Name
+  Sum,                     !- Outdoor Air Method
+  0.008,                 !- Outdoor Air Flow per Person {m3/s-person}
+  0.000222222222222222,                   !- Outdoor Air Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Outdoor Air Flow per Zone {m3/s}
+    ,                        !- Outdoor Air Flow Air Changes per Hour {1/hr}
+    AllOn;!- Outdoor Air Flow Rate Fraction Schedule Name
+! ------------------------ GEOMETRY
+
+
+ ! FACE NORMAL  0 0 -1
+BuildingSurface:Detailed,!-Type
+construction:f0, !-Name
+Floor,                    !-Surface Type
+defaultConstruction,                       !-Construction Name
+construction,            !-Zone Name
+Outdoors,                !-Outside Boundary Condition
+,                        !-Outside Boundary Condition Object
+NoSun,              !-Sun Exposure
+WindExposed,             !-Wind Exposure
+Autocalculate,                      !-View Factor to Ground
+4,                       !-Number of Vertices
+
+0.2018, 12.9983, 0.0000,  !- X,Y,Z ==> Vertex
+15.2763, 12.9983, 0.0000,  !- X,Y,Z ==> Vertex
+15.2763, 0.7011, 0.0000,  !- X,Y,Z ==> Vertex
+0.2018, 0.7011, 0.0000;  !- X,Y,Z ==> Vertex
+
+
+ ! FACE NORMAL  0 0 1
+BuildingSurface:Detailed,!-Type
+construction:f1, !-Name
+Roof,                    !-Surface Type
+defaultConstruction,                       !-Construction Name
+construction,            !-Zone Name
+Outdoors,                !-Outside Boundary Condition
+,                        !-Outside Boundary Condition Object
+SunExposed,              !-Sun Exposure
+WindExposed,             !-Wind Exposure
+0,                      !-View Factor to Ground
+4,                       !-Number of Vertices
+
+15.2763, 0.7011, 5.0000,  !- X,Y,Z ==> Vertex
+15.2763, 12.9983, 5.0000,  !- X,Y,Z ==> Vertex
+0.2018, 12.9983, 5.0000,  !- X,Y,Z ==> Vertex
+0.2018, 0.7011, 5.0000;  !- X,Y,Z ==> Vertex
+
+
+ ! FACE NORMAL  0 -1 0
+BuildingSurface:Detailed,!-Type
+construction:f2, !-Name
+Wall,                    !-Surface Type
+defaultConstruction,                       !-Construction Name
+construction,            !-Zone Name
+Outdoors,                !-Outside Boundary Condition
+,                        !-Outside Boundary Condition Object
+SunExposed,              !-Sun Exposure
+WindExposed,             !-Wind Exposure
+Autocalculate,                      !-View Factor to Ground
+4,                       !-Number of Vertices
+
+0.2018, 0.7011, 0.0000,  !- X,Y,Z ==> Vertex
+15.2763, 0.7011, 0.0000,  !- X,Y,Z ==> Vertex
+15.2763, 0.7011, 5.0000,  !- X,Y,Z ==> Vertex
+0.2018, 0.7011, 5.0000;  !- X,Y,Z ==> Vertex
+
+
+ ! FACE NORMAL  1 0 0
+BuildingSurface:Detailed,!-Type
+construction:f3, !-Name
+Wall,                    !-Surface Type
+defaultConstruction,                       !-Construction Name
+construction,            !-Zone Name
+Outdoors,                !-Outside Boundary Condition
+,                        !-Outside Boundary Condition Object
+SunExposed,              !-Sun Exposure
+WindExposed,             !-Wind Exposure
+Autocalculate,                      !-View Factor to Ground
+4,                       !-Number of Vertices
+
+15.2763, 0.7011, 0.0000,  !- X,Y,Z ==> Vertex
+15.2763, 12.9983, 0.0000,  !- X,Y,Z ==> Vertex
+15.2763, 12.9983, 5.0000,  !- X,Y,Z ==> Vertex
+15.2763, 0.7011, 5.0000;  !- X,Y,Z ==> Vertex
+
+FenestrationSurface:Detailed,
+construction:f3:w0, !-Name
+Window,                  !- Surface Type
+defaultGlazing,                    !- Construction Name
+construction:f3, !- Building Surface Name
+,                        !- Outside Boundary Condition Object
+Autocalculate,                      !- View Factor to Ground
+,                        !- Shading Control Name
+,                       !- Frame and Divider Name
+1,                       !- Multiplier
+4,                       !-Number of Vertices
+
+15.2763, 2.0288, 1.4495,  !- X,Y,Z ==> Vertex
+15.2763, 3.7130, 1.4495,  !- X,Y,Z ==> Vertex
+15.2763, 3.7130, 3.9495,  !- X,Y,Z ==> Vertex
+15.2763, 2.0288, 3.9495;  !- X,Y,Z ==> Vertex
+FenestrationSurface:Detailed,
+construction:f3:w1, !-Name
+Window,                  !- Surface Type
+defaultGlazing,                    !- Construction Name
+construction:f3, !- Building Surface Name
+,                        !- Outside Boundary Condition Object
+Autocalculate,                      !- View Factor to Ground
+,                        !- Shading Control Name
+,                       !- Frame and Divider Name
+1,                       !- Multiplier
+4,                       !-Number of Vertices
+
+15.2763, 9.5135, 1.4495,  !- X,Y,Z ==> Vertex
+15.2763, 11.1978, 1.4495,  !- X,Y,Z ==> Vertex
+15.2763, 11.1978, 3.9495,  !- X,Y,Z ==> Vertex
+15.2763, 9.5135, 3.9495;  !- X,Y,Z ==> Vertex
+
+ ! FACE NORMAL  0 1 0
+BuildingSurface:Detailed,!-Type
+construction:f4, !-Name
+Wall,                    !-Surface Type
+defaultConstruction,                       !-Construction Name
+construction,            !-Zone Name
+Outdoors,                !-Outside Boundary Condition
+,                        !-Outside Boundary Condition Object
+SunExposed,              !-Sun Exposure
+WindExposed,             !-Wind Exposure
+Autocalculate,                      !-View Factor to Ground
+4,                       !-Number of Vertices
+
+15.2763, 12.9983, 0.0000,  !- X,Y,Z ==> Vertex
+0.2018, 12.9983, 0.0000,  !- X,Y,Z ==> Vertex
+0.2018, 12.9983, 5.0000,  !- X,Y,Z ==> Vertex
+15.2763, 12.9983, 5.0000;  !- X,Y,Z ==> Vertex
+
+
+ ! FACE NORMAL  -1 0 0
+BuildingSurface:Detailed,!-Type
+construction:f5, !-Name
+Wall,                    !-Surface Type
+defaultConstruction,                       !-Construction Name
+construction,            !-Zone Name
+Outdoors,                !-Outside Boundary Condition
+,                        !-Outside Boundary Condition Object
+SunExposed,              !-Sun Exposure
+WindExposed,             !-Wind Exposure
+Autocalculate,                      !-View Factor to Ground
+4,                       !-Number of Vertices
+
+0.2018, 12.9983, 0.0000,  !- X,Y,Z ==> Vertex
+0.2018, 0.7011, 0.0000,  !- X,Y,Z ==> Vertex
+0.2018, 0.7011, 5.0000,  !- X,Y,Z ==> Vertex
+0.2018, 12.9983, 5.0000;  !- X,Y,Z ==> Vertex
+
+FenestrationSurface:Detailed,
+construction:f5:w0, !-Name
+Window,                  !- Surface Type
+defaultGlazing,                    !- Construction Name
+construction:f5, !- Building Surface Name
+,                        !- Outside Boundary Condition Object
+Autocalculate,                      !- View Factor to Ground
+,                        !- Shading Control Name
+,                       !- Frame and Divider Name
+1,                       !- Multiplier
+4,                       !-Number of Vertices
+
+0.2018, 10.8907, 1.3614,  !- X,Y,Z ==> Vertex
+0.2018, 9.2064, 1.3614,  !- X,Y,Z ==> Vertex
+0.2018, 9.2064, 3.8614,  !- X,Y,Z ==> Vertex
+0.2018, 10.8907, 3.8614;  !- X,Y,Z ==> Vertex
+FenestrationSurface:Detailed,
+construction:f5:w1, !-Name
+Window,                  !- Surface Type
+defaultGlazing,                    !- Construction Name
+construction:f5, !- Building Surface Name
+,                        !- Outside Boundary Condition Object
+Autocalculate,                      !- View Factor to Ground
+,                        !- Shading Control Name
+,                       !- Frame and Divider Name
+1,                       !- Multiplier
+4,                       !-Number of Vertices
+
+0.2018, 5.0371, 1.3614,  !- X,Y,Z ==> Vertex
+0.2018, 3.3528, 1.3614,  !- X,Y,Z ==> Vertex
+0.2018, 3.3528, 3.8614,  !- X,Y,Z ==> Vertex
+0.2018, 5.0371, 3.8614;  !- X,Y,Z ==> Vertex
+
+
+! ------------------------ OUTPUTS
+
+Output:Variable,*,Zone Ideal Loads Zone Total Heating Energy,Monthly;
+Output:Variable,*,Zone Ideal Loads Zone Total Cooling Energy,Monthly;
+
+
+Output:VariableDictionary, IDF;
+Output:Surfaces:Drawing,DXF,Triangulate3DFace;
+Output:Surfaces:List,Details;
+Output:Constructions,Construction;
+!Output:Diagnostics,DisplayExtraWarnings;
+!Output:Diagnostics,DisplayUnusedSchedules;
+!Output:Diagnostics,DisplayUnusedObjects;
+Output:Diagnostics,DisplayAdvancedReportVariables;
+
+Output:Table:SummaryReports,
+    EnvelopeSummary,         !- Report 1 Name
+    InputVerificationandResultsSummary,  !- Report 2 Name
+    ShadingSummary;          !- Report 3 Name
+
+
