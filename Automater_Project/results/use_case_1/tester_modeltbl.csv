@@ -1,4 +1,4 @@
-Program Version:,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2020.10.16 01:27
+Program Version:,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2020.10.16 16:44
 Tabular Output Report in Format: ,Comma
 
 Building:,Building
@@ -10,7 +10,7 @@ FOR:,Entire Facility
 General
 
 ,,Value
-,Program Version and Build,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2020.10.16 01:27
+,Program Version and Build,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2020.10.16 16:44
 ,RunPeriod,ARCHSIM
 ,Weather File,Cornell Univ Teaching Dairy Barn NY USA ISD-TMYx WMO#=749003
 ,Latitude [deg],42.44
