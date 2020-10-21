@@ -24,8 +24,8 @@ def rewrite(line, var_list, config):
 
 # paths
 file = r'user_inputs\base_case.cfg'
-output_cons = r'configs\cons_base.txt'
-output_win = r'configs\window_base.txt'
+output_cons = r'configs\cons_5.txt'
+output_win = r'configs\window_5.txt'
 default_cons = r'default_cons.txt'
 default_win = r'default_win.txt'
 
