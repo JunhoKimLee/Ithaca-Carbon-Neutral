@@ -1,0 +1,18 @@
+{
+  "$id": "1",
+  "HasFrame" false,  "Type": 0,
+  "ShadingSystemSetPoint" 180,  "ShadingSystemTransmittance" .5,  "IsVirtualPartition": false,
+  "ZoneMixingIsOn": false,
+  "ZoneMixingDeltaTemperature": 2.0,
+  "ZoneMixingFlowRate": 0.001,
+  "Construction" "defaultGlazing",  "ShadingSystemAvailibilitySchedule": "AllOn",
+  "OperableArea" .8,  "ShadingSystemIsOn" true,  "ShadingSystemType" 0,  "ZoneMixingAvailibilitySchedule": "AllOn",
+  "FrameWidth" .05,  "FrameProjection": 0.01,
+  "FrameConductance" 5,  "DividerWidth": 0.025,
+  "InsideSillRevealDepth": 0.2,
+  "AFN_TEMP_SETPT" 20,  "AFN_WIN_AVAIL" "AllOn",  "AFN_DISCHARGE_C" .65,  "VentControl" 0,  "CPArray": [],
+  "Name": "No name",
+  "Category": "No Category",
+  "Comment": "No comments",
+  "DataSource": "No data source"
+}

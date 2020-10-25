@@ -2,6 +2,8 @@
 # grasshopper config files and a legend
 
 from configparser import ConfigParser
+import os
+import math
 
 # takes a line and val and returns the line with the val as the new val
 def insert_val(line,val):
@@ -22,10 +24,14 @@ def rewrite(line, var_list, config):
       s = insert_val(line, val)
   return s
 
+# find which iteration of the results we are on
+output_dir ='configs'
+s = math.ceil((sum(len(files) for _, _, files in os.walk(output_dir)))/2) +1
+
 # paths
 file = r'user_inputs\base_case.cfg'
-output_cons = r'configs\cons_5.txt'
-output_win = r'configs\window_5.txt'
+output_cons = output_dir + r'\cons_' + str(s) + '.txt'
+output_win = output_dir + r'\window_' + str(s) + '.txt'
 default_cons = r'default_cons.txt'
 default_win = r'default_win.txt'
 
