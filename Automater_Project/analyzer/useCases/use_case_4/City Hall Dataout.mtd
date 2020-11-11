@@ -1,0 +1,576 @@
+
+ Meters for 8,CONSTRUCTION0 GENERAL LIGHTING:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:CONSTRUCTION0 [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:CONSTRUCTION0 [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 70,CONSTRUCTION1 GENERAL LIGHTING:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:CONSTRUCTION1 [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:CONSTRUCTION1 [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 92,CONSTRUCTION2 GENERAL LIGHTING:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:CONSTRUCTION2 [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:CONSTRUCTION2 [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 114,CONSTRUCTION3 GENERAL LIGHTING:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:CONSTRUCTION3 [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:CONSTRUCTION3 [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 136,CONSTRUCTION0 EQUIPMENT 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:CONSTRUCTION0 [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:CONSTRUCTION0 [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 168,CONSTRUCTION1 EQUIPMENT 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:CONSTRUCTION1 [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:CONSTRUCTION1 [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 180,CONSTRUCTION2 EQUIPMENT 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:CONSTRUCTION2 [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:CONSTRUCTION2 [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 192,CONSTRUCTION3 EQUIPMENT 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:CONSTRUCTION3 [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:CONSTRUCTION3 [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 204,CONSTRUCTION0:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:CONSTRUCTION0 [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:CONSTRUCTION0 [J]
+
+ Meters for 255,CONSTRUCTION0:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:CONSTRUCTION0 [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:CONSTRUCTION0 [J]
+
+ Meters for 276,CONSTRUCTION1:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:CONSTRUCTION1 [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:CONSTRUCTION1 [J]
+
+ Meters for 297,CONSTRUCTION1:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:CONSTRUCTION1 [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:CONSTRUCTION1 [J]
+
+ Meters for 308,CONSTRUCTION2:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:CONSTRUCTION2 [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:CONSTRUCTION2 [J]
+
+ Meters for 329,CONSTRUCTION2:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:CONSTRUCTION2 [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:CONSTRUCTION2 [J]
+
+ Meters for 340,CONSTRUCTION3:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:CONSTRUCTION3 [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:CONSTRUCTION3 [J]
+
+ Meters for 361,CONSTRUCTION3:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:CONSTRUCTION3 [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:CONSTRUCTION3 [J]
+
+ Meters for 372,CONSTRUCTION0 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy [J]
+  OnMeter=DistrictHeating:Facility [J]
+  OnMeter=DistrictHeating:HVAC [J]
+  OnMeter=Heating:DistrictHeating [J]
+
+ Meters for 403,CONSTRUCTION0 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy [J]
+  OnMeter=DistrictCooling:Facility [J]
+  OnMeter=DistrictCooling:HVAC [J]
+  OnMeter=Cooling:DistrictCooling [J]
+
+ Meters for 436,CONSTRUCTION1 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy [J]
+  OnMeter=DistrictHeating:Facility [J]
+  OnMeter=DistrictHeating:HVAC [J]
+  OnMeter=Heating:DistrictHeating [J]
+
+ Meters for 437,CONSTRUCTION1 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy [J]
+  OnMeter=DistrictCooling:Facility [J]
+  OnMeter=DistrictCooling:HVAC [J]
+  OnMeter=Cooling:DistrictCooling [J]
+
+ Meters for 440,CONSTRUCTION2 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy [J]
+  OnMeter=DistrictHeating:Facility [J]
+  OnMeter=DistrictHeating:HVAC [J]
+  OnMeter=Heating:DistrictHeating [J]
+
+ Meters for 441,CONSTRUCTION2 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy [J]
+  OnMeter=DistrictCooling:Facility [J]
+  OnMeter=DistrictCooling:HVAC [J]
+  OnMeter=Cooling:DistrictCooling [J]
+
+ Meters for 444,CONSTRUCTION3 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy [J]
+  OnMeter=DistrictHeating:Facility [J]
+  OnMeter=DistrictHeating:HVAC [J]
+  OnMeter=Heating:DistrictHeating [J]
+
+ Meters for 445,CONSTRUCTION3 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy [J]
+  OnMeter=DistrictCooling:Facility [J]
+  OnMeter=DistrictCooling:HVAC [J]
+  OnMeter=Cooling:DistrictCooling [J]
+
+ Meters for 448,DHW CONSTRUCTION0:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=DHW construction0:WaterSystems:Water [m3]
+
+ Meters for 489,DHW CONSTRUCTION0:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=DHW construction0:WaterSystems:MainsWater [m3]
+
+ Meters for 530,DHW CONSTRUCTION0:Water Use Equipment Heating Energy [J]
+  OnMeter=DistrictHeating:Facility [J]
+  OnMeter=DistrictHeating:Plant [J]
+  OnMeter=WaterSystems:DistrictHeating [J]
+  OnMeter=DHW construction0:WaterSystems:DistrictHeating [J]
+
+ Meters for 561,DHW CONSTRUCTION1:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=DHW construction1:WaterSystems:Water [m3]
+
+ Meters for 572,DHW CONSTRUCTION1:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=DHW construction1:WaterSystems:MainsWater [m3]
+
+ Meters for 583,DHW CONSTRUCTION1:Water Use Equipment Heating Energy [J]
+  OnMeter=DistrictHeating:Facility [J]
+  OnMeter=DistrictHeating:Plant [J]
+  OnMeter=WaterSystems:DistrictHeating [J]
+  OnMeter=DHW construction1:WaterSystems:DistrictHeating [J]
+
+ Meters for 594,DHW CONSTRUCTION2:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=DHW construction2:WaterSystems:Water [m3]
+
+ Meters for 605,DHW CONSTRUCTION2:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=DHW construction2:WaterSystems:MainsWater [m3]
+
+ Meters for 616,DHW CONSTRUCTION2:Water Use Equipment Heating Energy [J]
+  OnMeter=DistrictHeating:Facility [J]
+  OnMeter=DistrictHeating:Plant [J]
+  OnMeter=WaterSystems:DistrictHeating [J]
+  OnMeter=DHW construction2:WaterSystems:DistrictHeating [J]
+
+ Meters for 627,DHW CONSTRUCTION3:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=DHW construction3:WaterSystems:Water [m3]
+
+ Meters for 638,DHW CONSTRUCTION3:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=DHW construction3:WaterSystems:MainsWater [m3]
+
+ Meters for 649,DHW CONSTRUCTION3:Water Use Equipment Heating Energy [J]
+  OnMeter=DistrictHeating:Facility [J]
+  OnMeter=DistrictHeating:Plant [J]
+  OnMeter=WaterSystems:DistrictHeating [J]
+  OnMeter=DHW construction3:WaterSystems:DistrictHeating [J]
+
+ Meters for 660,Whole Building:Facility Total Purchased Electric Energy [J]
+  OnMeter=ElectricityPurchased:Facility [J]
+  OnMeter=ElectricityPurchased:Plant [J]
+  OnMeter=Cogeneration:ElectricityPurchased [J]
+
+ Meters for 691,Whole Building:Facility Total Surplus Electric Energy [J]
+  OnMeter=ElectricitySurplusSold:Facility [J]
+  OnMeter=ElectricitySurplusSold:Plant [J]
+  OnMeter=Cogeneration:ElectricitySurplusSold [J]
+
+ Meters for 722,Whole Building:Facility Net Purchased Electric Energy [J]
+  OnMeter=ElectricityNet:Facility [J]
+  OnMeter=ElectricityNet:Plant [J]
+  OnMeter=Cogeneration:ElectricityNet [J]
+
+ Meters for 753,Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ Meters for 774,Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ Meters for 775,Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ For Meter=Electricity:Facility [J], ResourceType=Electricity, contents are:
+  CONSTRUCTION0 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION1 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION2 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION3 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION0 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION1 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION2 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION3 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=Electricity:Building [J], ResourceType=Electricity, Group=Building, contents are:
+  CONSTRUCTION0 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION1 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION2 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION3 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION0 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION1 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION2 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION3 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=Electricity:Zone:CONSTRUCTION0 [J], ResourceType=Electricity, Group=Zone, contents are:
+  CONSTRUCTION0 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION0 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity [J], ResourceType=Electricity, EndUse=InteriorLights, contents are:
+  CONSTRUCTION0 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION1 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION2 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION3 GENERAL LIGHTING:Lights Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:CONSTRUCTION0 [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  CONSTRUCTION0 GENERAL LIGHTING:Lights Electric Energy
+
+ For Meter=General:InteriorLights:Electricity [J], ResourceType=Electricity, EndUse=InteriorLights, contents are:
+  CONSTRUCTION0 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION1 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION2 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION3 GENERAL LIGHTING:Lights Electric Energy
+
+ For Meter=Electricity:Zone:CONSTRUCTION1 [J], ResourceType=Electricity, Group=Zone, contents are:
+  CONSTRUCTION1 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION1 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:CONSTRUCTION1 [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  CONSTRUCTION1 GENERAL LIGHTING:Lights Electric Energy
+
+ For Meter=Electricity:Zone:CONSTRUCTION2 [J], ResourceType=Electricity, Group=Zone, contents are:
+  CONSTRUCTION2 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION2 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:CONSTRUCTION2 [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  CONSTRUCTION2 GENERAL LIGHTING:Lights Electric Energy
+
+ For Meter=Electricity:Zone:CONSTRUCTION3 [J], ResourceType=Electricity, Group=Zone, contents are:
+  CONSTRUCTION3 GENERAL LIGHTING:Lights Electric Energy
+  CONSTRUCTION3 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:CONSTRUCTION3 [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  CONSTRUCTION3 GENERAL LIGHTING:Lights Electric Energy
+
+ For Meter=InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
+  CONSTRUCTION0 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION1 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION2 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION3 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:CONSTRUCTION0 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  CONSTRUCTION0 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=General:InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
+  CONSTRUCTION0 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION1 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION2 EQUIPMENT 1:Electric Equipment Electric Energy
+  CONSTRUCTION3 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:CONSTRUCTION1 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  CONSTRUCTION1 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:CONSTRUCTION2 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  CONSTRUCTION2 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:CONSTRUCTION3 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  CONSTRUCTION3 EQUIPMENT 1:Electric Equipment Electric Energy
+
+ For Meter=EnergyTransfer:Facility [J], ResourceType=EnergyTransfer, contents are:
+  CONSTRUCTION0:Zone Air System Sensible Heating Energy
+  CONSTRUCTION0:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION1:Zone Air System Sensible Heating Energy
+  CONSTRUCTION1:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION2:Zone Air System Sensible Heating Energy
+  CONSTRUCTION2:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION3:Zone Air System Sensible Heating Energy
+  CONSTRUCTION3:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Building [J], ResourceType=EnergyTransfer, Group=Building, contents are:
+  CONSTRUCTION0:Zone Air System Sensible Heating Energy
+  CONSTRUCTION0:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION1:Zone Air System Sensible Heating Energy
+  CONSTRUCTION1:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION2:Zone Air System Sensible Heating Energy
+  CONSTRUCTION2:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION3:Zone Air System Sensible Heating Energy
+  CONSTRUCTION3:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:CONSTRUCTION0 [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  CONSTRUCTION0:Zone Air System Sensible Heating Energy
+  CONSTRUCTION0:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Heating, contents are:
+  CONSTRUCTION0:Zone Air System Sensible Heating Energy
+  CONSTRUCTION1:Zone Air System Sensible Heating Energy
+  CONSTRUCTION2:Zone Air System Sensible Heating Energy
+  CONSTRUCTION3:Zone Air System Sensible Heating Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:CONSTRUCTION0 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  CONSTRUCTION0:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Cooling, contents are:
+  CONSTRUCTION0:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION1:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION2:Zone Air System Sensible Cooling Energy
+  CONSTRUCTION3:Zone Air System Sensible Cooling Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:CONSTRUCTION0 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  CONSTRUCTION0:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:CONSTRUCTION1 [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  CONSTRUCTION1:Zone Air System Sensible Heating Energy
+  CONSTRUCTION1:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:CONSTRUCTION1 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  CONSTRUCTION1:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:CONSTRUCTION1 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  CONSTRUCTION1:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:CONSTRUCTION2 [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  CONSTRUCTION2:Zone Air System Sensible Heating Energy
+  CONSTRUCTION2:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:CONSTRUCTION2 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  CONSTRUCTION2:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:CONSTRUCTION2 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  CONSTRUCTION2:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:CONSTRUCTION3 [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  CONSTRUCTION3:Zone Air System Sensible Heating Energy
+  CONSTRUCTION3:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:CONSTRUCTION3 [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  CONSTRUCTION3:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:CONSTRUCTION3 [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  CONSTRUCTION3:Zone Air System Sensible Cooling Energy
+
+ For Meter=DistrictHeating:Facility [J], ResourceType=DistrictHeating, contents are:
+  CONSTRUCTION0 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION1 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION2 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION3 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  DHW CONSTRUCTION0:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION1:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION2:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION3:Water Use Equipment Heating Energy
+
+ For Meter=DistrictHeating:HVAC [J], ResourceType=DistrictHeating, Group=HVAC, contents are:
+  CONSTRUCTION0 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION1 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION2 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION3 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+
+ For Meter=Heating:DistrictHeating [J], ResourceType=DistrictHeating, EndUse=Heating, contents are:
+  CONSTRUCTION0 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION1 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION2 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+  CONSTRUCTION3 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Heating Energy
+
+ For Meter=DistrictCooling:Facility [J], ResourceType=DistrictCooling, contents are:
+  CONSTRUCTION0 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION1 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION2 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION3 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+
+ For Meter=DistrictCooling:HVAC [J], ResourceType=DistrictCooling, Group=HVAC, contents are:
+  CONSTRUCTION0 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION1 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION2 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION3 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+
+ For Meter=Cooling:DistrictCooling [J], ResourceType=DistrictCooling, EndUse=Cooling, contents are:
+  CONSTRUCTION0 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION1 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION2 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+  CONSTRUCTION3 IDEAL LOADS AIR:Zone Ideal Loads Supply Air Total Cooling Energy
+
+ For Meter=Water:Facility [m3], ResourceType=Water, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Total Volume
+  DHW CONSTRUCTION1:Water Use Equipment Total Volume
+  DHW CONSTRUCTION2:Water Use Equipment Total Volume
+  DHW CONSTRUCTION3:Water Use Equipment Total Volume
+
+ For Meter=Water:Plant [m3], ResourceType=Water, Group=Plant, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Total Volume
+  DHW CONSTRUCTION1:Water Use Equipment Total Volume
+  DHW CONSTRUCTION2:Water Use Equipment Total Volume
+  DHW CONSTRUCTION3:Water Use Equipment Total Volume
+
+ For Meter=WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Total Volume
+  DHW CONSTRUCTION1:Water Use Equipment Total Volume
+  DHW CONSTRUCTION2:Water Use Equipment Total Volume
+  DHW CONSTRUCTION3:Water Use Equipment Total Volume
+
+ For Meter=DHW construction0:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Total Volume
+
+ For Meter=MainsWater:Facility [m3], ResourceType=MainsWater, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION1:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION2:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION3:Water Use Equipment Mains Water Volume
+
+ For Meter=MainsWater:Plant [m3], ResourceType=MainsWater, Group=Plant, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION1:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION2:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION3:Water Use Equipment Mains Water Volume
+
+ For Meter=WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION1:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION2:Water Use Equipment Mains Water Volume
+  DHW CONSTRUCTION3:Water Use Equipment Mains Water Volume
+
+ For Meter=DHW construction0:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Mains Water Volume
+
+ For Meter=DistrictHeating:Plant [J], ResourceType=DistrictHeating, Group=Plant, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION1:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION2:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION3:Water Use Equipment Heating Energy
+
+ For Meter=WaterSystems:DistrictHeating [J], ResourceType=DistrictHeating, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION1:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION2:Water Use Equipment Heating Energy
+  DHW CONSTRUCTION3:Water Use Equipment Heating Energy
+
+ For Meter=DHW construction0:WaterSystems:DistrictHeating [J], ResourceType=DistrictHeating, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION0:Water Use Equipment Heating Energy
+
+ For Meter=DHW construction1:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION1:Water Use Equipment Total Volume
+
+ For Meter=DHW construction1:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION1:Water Use Equipment Mains Water Volume
+
+ For Meter=DHW construction1:WaterSystems:DistrictHeating [J], ResourceType=DistrictHeating, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION1:Water Use Equipment Heating Energy
+
+ For Meter=DHW construction2:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION2:Water Use Equipment Total Volume
+
+ For Meter=DHW construction2:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION2:Water Use Equipment Mains Water Volume
+
+ For Meter=DHW construction2:WaterSystems:DistrictHeating [J], ResourceType=DistrictHeating, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION2:Water Use Equipment Heating Energy
+
+ For Meter=DHW construction3:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION3:Water Use Equipment Total Volume
+
+ For Meter=DHW construction3:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION3:Water Use Equipment Mains Water Volume
+
+ For Meter=DHW construction3:WaterSystems:DistrictHeating [J], ResourceType=DistrictHeating, EndUse=WaterSystems, contents are:
+  DHW CONSTRUCTION3:Water Use Equipment Heating Energy
+
+ For Meter=ElectricityPurchased:Facility [J], ResourceType=ElectricityPurchased, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=ElectricityPurchased:Plant [J], ResourceType=ElectricityPurchased, Group=Plant, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=Cogeneration:ElectricityPurchased [J], ResourceType=ElectricityPurchased, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=ElectricitySurplusSold:Facility [J], ResourceType=ElectricitySurplusSold, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=ElectricitySurplusSold:Plant [J], ResourceType=ElectricitySurplusSold, Group=Plant, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=Cogeneration:ElectricitySurplusSold [J], ResourceType=ElectricitySurplusSold, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=ElectricityNet:Facility [J], ResourceType=ElectricityNet, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=ElectricityNet:Plant [J], ResourceType=ElectricityNet, Group=Plant, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=Cogeneration:ElectricityNet [J], ResourceType=ElectricityNet, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=Carbon Equivalent:Facility [kg], ResourceType=Carbon Equivalent, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass
+
+ For Meter=CarbonEquivalentEmissions:Carbon Equivalent [kg], ResourceType=Carbon Equivalent, EndUse=CarbonEquivalentEmissions, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass

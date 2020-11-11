@@ -1,0 +1,8 @@
+ ReadVarsESO
+ processing:C:\Users\Junho Kim-Lee\Documents\ICN\Use_Cases\Use_case14\City Hall Data.rvi
+ input file:C:\Users\Junho Kim-Lee\Documents\ICN\Use_Cases\Use_case14\City Hall Dataout.eso
+ output file:C:\Users\Junho Kim-Lee\Documents\ICN\Use_Cases\Use_case14\City Hall Dataout.csv
+ getting all vars from:C:\Users\Junho Kim-Lee\Documents\ICN\Use_Cases\Use_case14\City Hall Dataout.eso
+  number variables requested for output=          16
+ ReadVars Run Time=00hr 00min  0.03sec
+ ReadVarsESO program completed successfully.

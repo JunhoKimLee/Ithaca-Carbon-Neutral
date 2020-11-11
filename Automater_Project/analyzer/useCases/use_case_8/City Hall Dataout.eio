@@ -1,0 +1,1183 @@
+Program Version,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2020.04.15 16:06
+! <Version>, Version ID
+ Version, 8.4
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  4, 15
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 50, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, No, No, No, No, Yes, No
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>, Months From Jan to Dec {C}
+ Site:GroundTemperature:BuildingSurface,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00
+! <Site:GroundTemperature:FCfactorMethod>, Months From Jan to Dec {C}
+ Site:GroundTemperature:FCfactorMethod,  -2.52,  -3.56,  -1.72,   1.15,   8.66,  14.46,  18.36,  19.55,  17.53,  13.03,   7.01,   1.43
+! <Site:GroundTemperature:Shallow>, Months From Jan to Dec {C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>, Months From Jan to Dec {C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>, Months From Jan to Dec {dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>, Months From Jan to Dec {dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>, Months From Jan to Dec {dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient [Internal],Temperature Modifier Coefficient [Internal]
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Cornell Univ Teaching Dairy Barn NY USA ISD-TMYx WMO#=749003,42.44,-76.25,-5.00,374.30,96909,1.1518
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,Building,0.000,Suburbs,4.00000E-002,0.40000,FullExterior,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.220,370.000,6.500000E-003
+! <SurfaceGeometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,LowerLeftCorner,Counterclockwise,WorldCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,4,169,145
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, CONSTRUCTION0,0.0,0.00,0.00,0.00,8.20,18.10,11.50,1,1,1,0.80,15.60,0.80,35.40,9.00,14.00,5.00,2560.40,TARP,DOE-2,512.08,494.00,418.76,75.24,6,36,0,Yes
+ Zone Information, CONSTRUCTION1,0.0,0.00,0.00,0.00,8.20,18.10,7.50,1,1,1,0.80,15.60,0.80,35.40,6.00,9.00,3.00,1536.24,TARP,DOE-2,512.08,296.40,221.16,75.24,6,36,0,Yes
+ Zone Information, CONSTRUCTION2,0.0,0.00,0.00,0.00,8.20,18.10,4.50,1,1,1,0.80,15.60,0.80,35.40,3.00,6.00,3.00,1536.24,TARP,DOE-2,512.08,296.40,221.16,75.24,6,36,0,Yes
+ Zone Information, CONSTRUCTION3,0.0,0.00,0.00,0.00,8.20,18.10,1.50,1,1,1,0.80,15.60,0.80,35.40,0.00,3.00,3.00,1536.24,TARP,DOE-2,512.08,296.40,221.48,74.92,6,37,0,Yes
+! <Zone Internal Gains/Equipment Information - Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains, CONSTRUCTION0,512.08,10.2,50.000,2.000E-002,10.550,7.600,0.000,0.000,0.000,0.000,18.150,No
+ Zone Internal Gains, CONSTRUCTION1,512.08,10.2,50.000,2.000E-002,10.550,7.600,0.000,0.000,0.000,0.000,18.150,No
+ Zone Internal Gains, CONSTRUCTION2,512.08,10.2,50.000,2.000E-002,10.550,7.600,0.000,0.000,0.000,0.000,18.150,No
+ Zone Internal Gains, CONSTRUCTION3,512.08,10.2,50.000,2.000E-002,10.550,7.600,0.000,0.000,0.000,0.000,18.150,No
+! <People Internal Gains - Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Nominal Minimum Number of People,Nominal Maximum Number of People
+ People Internal Gains, PEOPLE CONSTRUCTION0,CITYHALL_SCHEDULE,CONSTRUCTION0,512.08,10.2,10.2,2.000E-002,50.000,0.300,0.700,AutoCalculate,CONSTRUCTION0PEOPLEACTIVITY,No,3.8200E-008,0,10
+ People Internal Gains, PEOPLE CONSTRUCTION1,CITYHALL_SCHEDULE,CONSTRUCTION1,512.08,10.2,10.2,2.000E-002,50.000,0.300,0.700,AutoCalculate,CONSTRUCTION1PEOPLEACTIVITY,No,3.8200E-008,0,10
+ People Internal Gains, PEOPLE CONSTRUCTION2,CITYHALL_SCHEDULE,CONSTRUCTION2,512.08,10.2,10.2,2.000E-002,50.000,0.300,0.700,AutoCalculate,CONSTRUCTION2PEOPLEACTIVITY,No,3.8200E-008,0,10
+ People Internal Gains, PEOPLE CONSTRUCTION3,CITYHALL_SCHEDULE,CONSTRUCTION3,512.08,10.2,10.2,2.000E-002,50.000,0.300,0.700,AutoCalculate,CONSTRUCTION3PEOPLEACTIVITY,No,3.8200E-008,0,10
+! <Lights Internal Gains - Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use Category,Nominal Minimum Lighting Level {W},Nominal Maximum Lighting Level {W}
+ Lights Internal Gains, CONSTRUCTION0 GENERAL LIGHTING,CITYHALL_SCHEDULE,CONSTRUCTION0,512.08,10.2,5402.444,10.550,527.500,0.000,0.420,0.180,0.400,1.000,General,0.000,5402.444
+ Lights Internal Gains, CONSTRUCTION1 GENERAL LIGHTING,CITYHALL_SCHEDULE,CONSTRUCTION1,512.08,10.2,5402.444,10.550,527.500,0.000,0.420,0.180,0.400,1.000,General,0.000,5402.444
+ Lights Internal Gains, CONSTRUCTION2 GENERAL LIGHTING,CITYHALL_SCHEDULE,CONSTRUCTION2,512.08,10.2,5402.444,10.550,527.500,0.000,0.420,0.180,0.400,1.000,General,0.000,5402.444
+ Lights Internal Gains, CONSTRUCTION3 GENERAL LIGHTING,CITYHALL_SCHEDULE,CONSTRUCTION3,512.08,10.2,5402.444,10.550,527.500,0.000,0.420,0.180,0.400,1.000,General,0.000,5402.444
+! <ElectricEquipment Internal Gains - Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ ElectricEquipment Internal Gains, CONSTRUCTION0 EQUIPMENT 1,CITYHALL_SCHEDULE,CONSTRUCTION0,512.08,10.2,3891.808,7.600,380.000,0.000,0.200,0.000,0.800,General,0.000,3891.808
+ ElectricEquipment Internal Gains, CONSTRUCTION1 EQUIPMENT 1,CITYHALL_SCHEDULE,CONSTRUCTION1,512.08,10.2,3891.808,7.600,380.000,0.000,0.200,0.000,0.800,General,0.000,3891.808
+ ElectricEquipment Internal Gains, CONSTRUCTION2 EQUIPMENT 1,CITYHALL_SCHEDULE,CONSTRUCTION2,512.08,10.2,3891.808,7.600,380.000,0.000,0.200,0.000,0.800,General,0.000,3891.808
+ ElectricEquipment Internal Gains, CONSTRUCTION3 EQUIPMENT 1,CITYHALL_SCHEDULE,CONSTRUCTION3,512.08,10.2,3891.808,7.600,380.000,0.000,0.200,0.000,0.800,General,0.000,3891.808
+! <Construction CTF>,Construction Name,Index,#Layers,#CTFs,Time Step {hours},ThermalConductance {w/m2-K},OuterThermalAbsorptance,InnerThermalAbsorptance,OuterSolarAbsorptance,InnerSolarAbsorptance,Roughness
+! <Material CTF Summary>,Material Name,Thickness {m},Conductivity {w/m-K},Density {kg/m3},Specific Heat {J/kg-K},ThermalResistance {m2-K/w}
+! <Material:Air>,Material Name,ThermalResistance {m2-K/w}
+! <CTF>,Time,Outside,Cross,Inside,Flux (except final one)
+ Construction CTF,DEFAULTCONSTRUCTION,   1,   1,   5,   0.250,      9.200    ,   0.900,   0.900,   0.700,   0.700,Rough
+ Material CTF Summary,DEFAULTMAT_0.25_DEFAULTCONSTRUCTION,  0.2500,         2.300,   2400.000,      840.000,  0.1087    
+ CTF,   5,     -0.41588770    ,      0.31626830E-04,     -0.41588770    ,      0.59419716E-02
+ CTF,   4,       7.1091937    ,      0.41000209E-02,       7.1091937    ,     -0.10682477    
+ CTF,   3,      -41.448838    ,      0.47550836E-01,      -41.448838    ,      0.66741677    
+ CTF,   2,       104.29521    ,      0.98244529E-01,       104.29521    ,      -1.8305067    
+ CTF,   1,      -115.91866    ,      0.36445736E-01,      -115.91866    ,       2.2435815    
+ CTF,   0,       46.566580    ,      0.12271865E-02,       46.566580    
+ Construction CTF,DEFAULTCONSTRUCTION_FLIPPED,   2,   1,   5,   0.250,      9.200    ,   0.900,   0.900,   0.700,   0.700,Rough
+ Material CTF Summary,DEFAULTMAT_0.25_DEFAULTCONSTRUCTION,  0.2500,         2.300,   2400.000,      840.000,  0.1087    
+ CTF,   5,     -0.41588770    ,      0.31626830E-04,     -0.41588770    ,      0.59419716E-02
+ CTF,   4,       7.1091937    ,      0.41000209E-02,       7.1091937    ,     -0.10682477    
+ CTF,   3,      -41.448838    ,      0.47550836E-01,      -41.448838    ,      0.66741677    
+ CTF,   2,       104.29521    ,      0.98244529E-01,       104.29521    ,      -1.8305067    
+ CTF,   1,      -115.91866    ,      0.36445736E-01,      -115.91866    ,       2.2435815    
+ CTF,   0,       46.566580    ,      0.12271865E-02,       46.566580    
+ Construction CTF,115MMSANDLIMEBRICK,   3,   3,   9,   0.250,      4.389    ,   0.900,   0.900,   0.700,   0.700,Rough
+ Material CTF Summary,PLASTER_0.005_115MMSANDLIMEBRICK,  0.0050,         1.000,   2000.000,     1130.000,  0.5000E-02
+ Material CTF Summary,SAND-LIME BRICK_0.08_115MMSANDLIMEBRICK,  0.0800,         0.560,   1200.000,     1000.000,  0.1429    
+ Material CTF Summary,PLASTER_0.08_115MMSANDLIMEBRICK,  0.0800,         1.000,   2000.000,     1130.000,  0.8000E-01
+ CTF,   9,     -0.21501880E-08,      0.72523256E-12,     -0.31509102E-10,      0.70457232E-13
+ CTF,   8,      0.15152773E-05,      0.16682685E-08,      0.50237067E-07,     -0.13352371E-09
+ CTF,   7,     -0.34984672E-03,      0.88778552E-06,     -0.27511435E-04,      0.91037749E-07
+ CTF,   6,      0.27556397E-01,      0.11227879E-03,      0.46177843E-02,     -0.19919480E-04
+ CTF,   5,     -0.76092555    ,      0.36438432E-02,     -0.25313320    ,      0.14430310E-02
+ CTF,   4,       8.4993152    ,      0.31914067E-01,       4.5451181    ,     -0.35095963E-01
+ CTF,   3,      -41.957145    ,      0.75407401E-01,      -31.335685    ,      0.32483822    
+ CTF,   2,       97.093252    ,      0.43037218E-01,       89.581251    ,      -1.2249769    
+ CTF,   1,      -102.51568    ,      0.40220237E-02,      -108.86230    ,       1.8977760    
+ CTF,   0,       39.772128    ,      0.11796295E-04,       46.478310    
+ Construction CTF,115MMSANDLIMEBRICK_FLIPPED,   4,   3,   9,   0.250,      4.389    ,   0.900,   0.900,   0.700,   0.700,Rough
+ Material CTF Summary,PLASTER_0.08_115MMSANDLIMEBRICK,  0.0800,         1.000,   2000.000,     1130.000,  0.8000E-01
+ Material CTF Summary,SAND-LIME BRICK_0.08_115MMSANDLIMEBRICK,  0.0800,         0.560,   1200.000,     1000.000,  0.1429    
+ Material CTF Summary,PLASTER_0.005_115MMSANDLIMEBRICK,  0.0050,         1.000,   2000.000,     1130.000,  0.5000E-02
+ CTF,   9,     -0.31509102E-10,      0.72523256E-12,     -0.21501880E-08,      0.70457232E-13
+ CTF,   8,      0.50237067E-07,      0.16682685E-08,      0.15152773E-05,     -0.13352371E-09
+ CTF,   7,     -0.27511435E-04,      0.88778552E-06,     -0.34984672E-03,      0.91037749E-07
+ CTF,   6,      0.46177843E-02,      0.11227879E-03,      0.27556397E-01,     -0.19919480E-04
+ CTF,   5,     -0.25313320    ,      0.36438432E-02,     -0.76092555    ,      0.14430310E-02
+ CTF,   4,       4.5451181    ,      0.31914067E-01,       8.4993152    ,     -0.35095963E-01
+ CTF,   3,      -31.335685    ,      0.75407401E-01,      -41.957145    ,      0.32483822    
+ CTF,   2,       89.581251    ,      0.43037218E-01,       97.093252    ,      -1.2249769    
+ CTF,   1,      -108.86230    ,      0.40220237E-02,      -102.51568    ,       1.8977760    
+ CTF,   0,       46.478310    ,      0.11796295E-04,       39.772128    
+ Construction CTF,200MMCONCRETE,   5,   1,   5,   0.250,      10.00    ,   0.900,   0.900,   0.700,   0.700,Rough
+ Material CTF Summary,GENERAL CONCRETE_0.2_200MMCONCRETE,  0.2000,         2.000,   2400.000,      950.000,  0.1000    
+ CTF,   5,     -0.17107389    ,      0.36121500E-04,     -0.17107389    ,      0.21167048E-02
+ CTF,   4,       3.9842694    ,      0.56502063E-02,       3.9842694    ,     -0.52145088E-01
+ CTF,   3,      -29.519232    ,      0.77569186E-01,      -29.519232    ,      0.41962372    
+ CTF,   2,       88.465641    ,      0.18486804    ,       88.465641    ,      -1.3996541    
+ CTF,   1,      -111.58271    ,      0.77511351E-01,      -111.58271    ,       1.9952029    
+ CTF,   0,       49.171664    ,      0.29237595E-02,       49.171664    
+ Construction CTF,200MMCONCRETE_FLIPPED,   6,   1,   5,   0.250,      10.00    ,   0.900,   0.900,   0.700,   0.700,Rough
+ Material CTF Summary,GENERAL CONCRETE_0.2_200MMCONCRETE,  0.2000,         2.000,   2400.000,      950.000,  0.1000    
+ CTF,   5,     -0.17107389    ,      0.36121500E-04,     -0.17107389    ,      0.21167048E-02
+ CTF,   4,       3.9842694    ,      0.56502063E-02,       3.9842694    ,     -0.52145088E-01
+ CTF,   3,      -29.519232    ,      0.77569186E-01,      -29.519232    ,      0.41962372    
+ CTF,   2,       88.465641    ,      0.18486804    ,       88.465641    ,      -1.3996541    
+ CTF,   1,      -111.58271    ,      0.77511351E-01,      -111.58271    ,       1.9952029    
+ CTF,   0,       49.171664    ,      0.29237595E-02,       49.171664    
+ Construction CTF,120MMINSULATION 200MMCONCRETE,   7,   2,  11,   0.250,     0.2755    ,   0.900,   0.900,   0.700,   0.700,Rough
+ Material CTF Summary,XPS BOARD_0.12_120MMINSULATION 200MMCONCRETE,  0.1200,         0.034,     35.000,     1400.000,   3.529    
+ Material CTF Summary,GENERAL CONCRETE_0.2_120MMINSULATION 200MMCONCRETE,  0.2000,         2.000,   2400.000,      950.000,  0.1000    
+ CTF,  11,     -0.64812074E-09,      0.22225973E-16,     -0.11819857E-07,      0.14624761E-09
+ CTF,  10,      0.25794073E-06,      0.11745901E-12,      0.52121300E-05,     -0.64686661E-07
+ CTF,   9,     -0.24034169E-04,      0.12624696E-09,     -0.55517423E-03,      0.69551276E-05
+ CTF,   8,      0.84951753E-03,      0.22104198E-07,      0.21805272E-01,     -0.27868106E-03
+ CTF,   7,     -0.14922361E-01,      0.10128252E-05,     -0.42009885    ,      0.55248379E-02
+ CTF,   6,      0.14575921    ,      0.15048351E-04,       4.4544989    ,     -0.60857048E-01
+ CTF,   5,     -0.83240210    ,      0.79927030E-04,      -27.381804    ,      0.39259848    
+ CTF,   4,       2.8452211    ,      0.15475577E-03,       99.988995    ,      -1.5190396    
+ CTF,   3,      -5.8353832    ,      0.10300910E-03,      -217.06267    ,       3.5234402    
+ CTF,   2,       6.9792348    ,      0.19683337E-04,       272.27549    ,      -4.7506442    
+ CTF,   1,      -4.4605891    ,      0.67349775E-06,      -181.04696    ,       3.4078912    
+ CTF,   0,       1.1726301    ,      0.71887741E-09,       49.171664    
+ Construction CTF,120MMINSULATION 200MMCONCRETE_FLIPPED,   8,   2,  11,   0.250,     0.2755    ,   0.900,   0.900,   0.700,   0.700,Rough
+ Material CTF Summary,GENERAL CONCRETE_0.2_120MMINSULATION 200MMCONCRETE,  0.2000,         2.000,   2400.000,      950.000,  0.1000    
+ Material CTF Summary,XPS BOARD_0.12_120MMINSULATION 200MMCONCRETE,  0.1200,         0.034,     35.000,     1400.000,   3.529    
+ CTF,  11,     -0.11819857E-07,      0.22225973E-16,     -0.64812074E-09,      0.14624761E-09
+ CTF,  10,      0.52121300E-05,      0.11745901E-12,      0.25794073E-06,     -0.64686661E-07
+ CTF,   9,     -0.55517423E-03,      0.12624696E-09,     -0.24034169E-04,      0.69551276E-05
+ CTF,   8,      0.21805272E-01,      0.22104198E-07,      0.84951753E-03,     -0.27868106E-03
+ CTF,   7,     -0.42009885    ,      0.10128252E-05,     -0.14922361E-01,      0.55248379E-02
+ CTF,   6,       4.4544989    ,      0.15048351E-04,      0.14575921    ,     -0.60857048E-01
+ CTF,   5,      -27.381804    ,      0.79927030E-04,     -0.83240210    ,      0.39259848    
+ CTF,   4,       99.988995    ,      0.15475577E-03,       2.8452211    ,      -1.5190396    
+ CTF,   3,      -217.06267    ,      0.10300910E-03,      -5.8353832    ,       3.5234402    
+ CTF,   2,       272.27549    ,      0.19683337E-04,       6.9792348    ,      -4.7506442    
+ CTF,   1,      -181.04696    ,      0.67349775E-06,      -4.4605891    ,       3.4078912    
+ CTF,   0,       49.171664    ,      0.71887741E-09,       1.1726301    
+! <WindowConstruction>,Construction Name,Index,#Layers,Roughness,Conductance {W/m2-K},SHGC,Solar Transmittance at Normal Incidence,Visible Transmittance at Normal Incidence
+! <WindowMaterial:Glazing>, Material Name, Optical Data Type, Spectral Data Set Name, Thickness {m}, Solar Transmittance,Front Solar Reflectance, Back Solar Reflectance, Visible Transmittance, Front Visible Reflectance,Back Visible Reflectance,Infrared Transmittance, Front Thermal Emissivity, Back Thermal Emissivity,Conductivity {W/m-K},Dirt Factor,Solar Diffusing
+ WindowConstruction,DOUBLEPANELOEE3,9,1,VerySmooth,1.507,0.649,0.578,0.770
+ WindowMaterial:Glazing,DOUBLEPANELOEE3WINDOW,SpectralAverage,,4.45216E-002,0.57678,0.25884,0.25884,0.76900,0.14394,0.14936,0.00000,0.84000,0.84000,9.11534E-002,1.00000,No
+! <Shadowing/Sun Position Calculations> [Annual Simulations], Calculation Method, Value {days}, Allowable Number Figures in Shadow Overlap {}, Polygon Clipping Algorithm, Sky Diffuse Modeling Algorithm
+Shadowing/Sun Position Calculations,AverageOverDaysInFrequency,20,15000,SutherlandHodgman,SimpleSkyDiffuseModeling
+! <Zone/Window Adjacency Daylighting Counts>, Zone Name, Number of Exterior Windows, Number of Exterior Windows in Adjacent Zones
+Zone/Window Adjacency Daylighting Counts, CONSTRUCTION0,36,0
+Zone/Window Adjacency Daylighting Counts, CONSTRUCTION1,36,0
+Zone/Window Adjacency Daylighting Counts, CONSTRUCTION2,36,0
+Zone/Window Adjacency Daylighting Counts, CONSTRUCTION3,37,0
+! <Zone/Window Adjacency Daylighting Matrix>, Zone Name, Number of Adjacent Zones with Windows,Adjacent Zone Names - 1st 100 (max)
+Zone/Window Adjacency Daylighting Matrix, CONSTRUCTION0,0
+Zone/Window Adjacency Daylighting Matrix, CONSTRUCTION1,0
+Zone/Window Adjacency Daylighting Matrix, CONSTRUCTION2,0
+Zone/Window Adjacency Daylighting Matrix, CONSTRUCTION3,0
+! <Surface View Factor Check Values>,Zone Name,Original Check Value,Calculated Fixed Check Value,Final Check Value,Number of Iterations,Fixed RowSum Convergence,Used RowSum Convergence
+Surface View Factor Check Values,CONSTRUCTION0,1.705303E-013,7.173516E-004,7.173516E-004,18,7.173516E-004,7.173516E-004
+Surface View Factor Check Values,CONSTRUCTION1,8.526513E-014,8.393542E-004,8.393542E-004,17,8.393542E-004,8.393542E-004
+Surface View Factor Check Values,CONSTRUCTION2,8.526513E-014,8.393542E-004,8.393542E-004,17,8.393542E-004,8.393542E-004
+Surface View Factor Check Values,CONSTRUCTION3,7.105427E-014,8.663839E-004,8.663839E-004,17,8.663839E-004,8.663839E-004
+! <Surface Convection Parameters>, Surface Name, Outside Model Assignment, Outside Area [m2], Outside Perimeter [m], Outside Height [m], Inside Model Assignment, Inside Height [cm], Inside Perimeter Envelope [m], Inside Hydraulic Diameter [m], Window Wall Ratio [ ], Window Location [ ], Near Radiant [Yes/No], Has Active HVAC [Yes/No]
+Surface Convection Parameters,CONSTRUCTION0:F0,0,207.20,59.24,14.00,0,5.00,98.80,20.73,0.15,4,No,No
+Surface Convection Parameters,CONSTRUCTION0:F0:W0,0,207.20,59.24,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F0:W1,0,207.20,59.24,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F0:W2,0,207.20,59.24,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F0:W3,0,207.20,59.24,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F0:W4,0,207.20,59.24,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,4,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W0,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W1,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W2,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W3,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W4,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W5,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W6,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W7,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W8,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W9,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W10,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W11,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W12,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F1:W13,0,484.40,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F2,0,207.20,105.38,14.00,0,5.00,98.80,20.73,0.15,4,No,No
+Surface Convection Parameters,CONSTRUCTION0:F2:W0,0,207.20,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F2:W1,0,207.20,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F2:W2,0,207.20,105.38,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,4,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W0,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W1,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W2,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W3,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W4,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W5,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W6,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W7,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W8,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W9,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W10,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W11,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W12,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F3:W13,0,484.40,98.83,14.00,0,5.00,98.80,20.73,0.15,1,No,No
+Surface Convection Parameters,CONSTRUCTION0:F4,0,0.00,0.00,0.00,0,5.00,98.80,20.73,0.15,0,No,No
+Surface Convection Parameters,CONSTRUCTION0:F5,0,512.08,98.80,0.00,0,5.00,98.80,20.73,0.15,0,No,No
+Surface Convection Parameters,CONSTRUCTION1:F0,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION1:F0:W0,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F0:W1,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F0:W2,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F0:W3,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F0:W4,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W0,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W1,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W2,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W3,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W4,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W5,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W6,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W7,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W8,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W9,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W10,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W11,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W12,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F1:W13,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F2,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION1:F2:W0,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F2:W1,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F2:W2,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W0,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W1,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W2,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W3,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W4,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W5,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W6,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W7,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W8,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W9,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W10,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W11,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W12,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F3:W13,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION1:F4,0,0.00,0.00,0.00,0,3.00,98.80,20.73,0.25,0,No,No
+Surface Convection Parameters,CONSTRUCTION1:F5,0,0.00,0.00,0.00,0,3.00,98.80,20.73,0.25,0,No,No
+Surface Convection Parameters,CONSTRUCTION2:F0,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION2:F0:W0,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F0:W1,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F0:W2,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F0:W3,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F0:W4,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W0,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W1,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W2,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W3,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W4,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W5,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W6,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W7,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W8,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W9,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W10,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W11,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W12,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F1:W13,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F2,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION2:F2:W0,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F2:W1,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F2:W2,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W0,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W1,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W2,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W3,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W4,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W5,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W6,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W7,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W8,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W9,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W10,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W11,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W12,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F3:W13,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION2:F4,0,0.00,0.00,0.00,0,3.00,98.80,20.73,0.25,0,No,No
+Surface Convection Parameters,CONSTRUCTION2:F5,0,0.00,0.00,0.00,0,3.00,98.80,20.73,0.25,0,No,No
+Surface Convection Parameters,CONSTRUCTION3:F0,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,4,No,No
+Surface Convection Parameters,CONSTRUCTION3:F0:W0,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F0:W1,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F0:W2,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F0:W3,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F0:W4,0,207.20,59.24,14.00,0,3.00,98.80,20.73,0.25,1,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W0,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,1,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W1,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,1,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W2,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W3,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W4,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W5,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W6,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W7,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W8,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W9,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W10,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W11,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W12,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W13,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W14,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,1,No,No
+Surface Convection Parameters,CONSTRUCTION3:F1:W15,0,484.40,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F2,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION3:F2:W0,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,1,No,No
+Surface Convection Parameters,CONSTRUCTION3:F2:W1,0,207.20,105.38,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,3,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W0,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W1,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W2,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W3,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W4,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W5,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W6,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W7,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W8,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W9,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W10,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W11,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W12,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F3:W13,0,484.40,98.83,14.00,0,3.00,98.80,20.73,0.25,2,No,No
+Surface Convection Parameters,CONSTRUCTION3:F4,0,512.08,98.80,0.00,0,3.00,98.80,20.73,0.25,0,No,No
+Surface Convection Parameters,CONSTRUCTION3:F5,0,0.00,0.00,0.00,0,3.00,98.80,20.73,0.25,0,No,No
+! <Building Convection Parameters:North Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:North Facade, 105.38,14.00,0.00,15.60,0.00,35.40,0.00,14.00
+! <Building Convection Parameters:Northeast Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:Northeast Facade, 0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+! <Building Convection Parameters:East Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:East Facade, 105.38,14.00,0.00,15.60,0.00,35.40,0.00,14.00
+! <Building Convection Parameters:Southeast Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:Southeast Facade, 0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+! <Building Convection Parameters:South Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:South Facade, 59.24,14.00,0.00,15.60,0.00,0.80,0.00,14.00
+! <Building Convection Parameters:Southwest Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:Southwest Facade, 0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+! <Building Convection Parameters:West Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:West Facade, 98.83,14.00,0.00,0.80,0.00,35.40,0.00,14.00
+! <Building Convection Parameters:Northwest Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:NorthwWest Facade, 0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+! <Building Convection Parameters:Roof>, Area [m2], Perimeter [m], Height [m], XdYdZd:X, XdYdZd:Y, XdYdZd:Z,XdYdZu:X, XdYdZu:Y, XdYdZu:Z,XdYuZd:X, XdYuZd:Y, XdYuZd:Z,XdYuZu:X, XdYuZu:Y, XdYuZu:Z,XuYdZd:X, XuYdZd:Y, XuYdZd:Z,XuYuZd:X, XuYuZd:Y, XuYuZd:Z,XuYdZu:X, XuYdZu:Y, XuYdZu:Z,XuYuZu:X, XuYuZu:Y, XuYuZu:Z
+Building Convection Parameters:Roof,512.08,79.00,0.00,0.798,0.804,14.000,0.798,0.804,14.000,0.798,35.404,14.000,0.798,35.404,14.000,15.598,0.804,14.000,15.598,35.404,14.000,15.598,0.804,14.000,15.598,35.404,14.000
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,CONSTRUCTION0,Mixing/Well-Stirred
+RoomAir Model,CONSTRUCTION1,Mixing/Well-Stirred
+RoomAir Model,CONSTRUCTION2,Mixing/Well-Stirred
+RoomAir Model,CONSTRUCTION3,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,MultizoneWithoutDistribution
+! <AirflowNetwork Model:Wind Direction>, Wind Direction #1 to n (degree)
+AirflowNetwork Model:Wind Direction, 0.0,30.0,60.0,90.0,120.0,150.0,180.0,210.0,240.0,270.0,300.0,330.0
+! <AirflowNetwork Model:Wind Pressure Coefficients>, Name, Wind Pressure Coefficients #1 to n (dimensionless)
+AirflowNetwork Model:Wind Pressure Coefficients, FacadeNum1, 0.60,0.47,0.12,-0.44,-0.68,-0.39,-0.36,-0.39,-0.68,-0.44,0.12,0.47
+AirflowNetwork Model:Wind Pressure Coefficients, FacadeNum2, -0.44,0.12,0.47,0.60,0.47,0.12,-0.44,-0.68,-0.39,-0.36,-0.39,-0.68
+AirflowNetwork Model:Wind Pressure Coefficients, FacadeNum3, -0.36,-0.39,-0.68,-0.44,0.12,0.47,0.60,0.47,0.12,-0.44,-0.68,-0.39
+AirflowNetwork Model:Wind Pressure Coefficients, FacadeNum4, -0.44,-0.68,-0.39,-0.36,-0.39,-0.68,-0.44,0.12,0.47,0.60,0.47,0.12
+AirflowNetwork Model:Wind Pressure Coefficients, FacadeNum5, -0.70,-0.55,-0.55,-0.70,-0.55,-0.55,-0.70,-0.55,-0.55,-0.70,-0.55,-0.55
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CONSTRUCTION0 IDEAL LOADS AIR, User-Specified Maximum Heating Air Flow Rate [m3/s], 100.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CONSTRUCTION0 IDEAL LOADS AIR, User-Specified Maximum Cooling Air Flow Rate [m3/s], 100.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CONSTRUCTION1 IDEAL LOADS AIR, User-Specified Maximum Heating Air Flow Rate [m3/s], 100.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CONSTRUCTION1 IDEAL LOADS AIR, User-Specified Maximum Cooling Air Flow Rate [m3/s], 100.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CONSTRUCTION2 IDEAL LOADS AIR, User-Specified Maximum Heating Air Flow Rate [m3/s], 100.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CONSTRUCTION2 IDEAL LOADS AIR, User-Specified Maximum Cooling Air Flow Rate [m3/s], 100.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CONSTRUCTION3 IDEAL LOADS AIR, User-Specified Maximum Heating Air Flow Rate [m3/s], 100.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CONSTRUCTION3 IDEAL LOADS AIR, User-Specified Maximum Cooling Air Flow Rate [m3/s], 100.00000
+! <Zone/Shading Surfaces>,<Zone Name>/#Shading Surfaces,# Surfaces
+! <HeatTransfer/Shading/Frame/Divider_Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Construction/Transmittance Schedule,Nominal U (w/o film coefs)/Min Schedule Value,Nominal U (with film coefs)/Max Schedule Value,Solar Diffusing,Area (Net),Area (Gross),Area (Sunlit Calc),Azimuth,Tilt,~Width,~Height,Reveal,<ExtBoundCondition>,<ExtConvCoeffCalc>,<IntConvCoeffCalc>,<SunExposure>,<WindExposure>,ViewFactorToGround,ViewFactorToSky,ViewFactorToGround-IR,ViewFactorToSky-IR,#Sides
+! <Units>,,,,,,{W/m2-K}/{},{W/m2-K}/{},{},{m2},{m2},{m2},{deg},{deg},{m},{m},{m},,,,,,,,,,
+Zone_Surfaces,CONSTRUCTION0,   42
+HeatTransfer_Surface,CONSTRUCTION0:F0,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,63.55,74.00,63.55,180.00,90.00,14.80,5.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F0:W0,Window,CONSTRUCTION0:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F0:W1,Window,CONSTRUCTION0:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F0:W2,Window,CONSTRUCTION0:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F0:W3,Window,CONSTRUCTION0:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F0:W4,Window,CONSTRUCTION0:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,143.74,173.00,143.74,90.00,90.00,34.60,5.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W0,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W1,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W2,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W3,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W4,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W5,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W6,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W7,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W8,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W9,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W10,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W11,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W12,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F1:W13,Window,CONSTRUCTION0:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F2,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,67.73,74.00,67.73,0.00,90.00,14.80,5.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F2:W0,Window,CONSTRUCTION0:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F2:W1,Window,CONSTRUCTION0:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F2:W2,Window,CONSTRUCTION0:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,143.74,173.00,143.74,270.00,90.00,34.60,5.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W0,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W1,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W2,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W3,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W4,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W5,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W6,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W7,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W8,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W9,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W10,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W11,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W12,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F3:W13,Window,CONSTRUCTION0:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION0:F4,Floor,,CTF - ConductionTransferFunction,,10.000,2.915,,512.08,512.08,512.08,180.00,180.00,14.80,34.60,0.00,CONSTRUCTION1:F5,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer_Surface,CONSTRUCTION0:F5,Roof,,CTF - ConductionTransferFunction,,0.276,0.262,,512.08,512.08,512.08,90.00,0.00,34.60,14.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+Zone_Surfaces,CONSTRUCTION1,   42
+HeatTransfer_Surface,CONSTRUCTION1:F0,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,33.95,44.40,33.95,180.00,90.00,14.80,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F0:W0,Window,CONSTRUCTION1:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F0:W1,Window,CONSTRUCTION1:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F0:W2,Window,CONSTRUCTION1:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F0:W3,Window,CONSTRUCTION1:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F0:W4,Window,CONSTRUCTION1:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,74.54,103.80,74.54,90.00,90.00,34.60,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W0,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W1,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W2,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W3,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W4,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W5,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W6,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W7,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W8,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W9,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W10,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W11,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W12,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F1:W13,Window,CONSTRUCTION1:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F2,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,38.13,44.40,38.13,0.00,90.00,14.80,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F2:W0,Window,CONSTRUCTION1:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F2:W1,Window,CONSTRUCTION1:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F2:W2,Window,CONSTRUCTION1:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,74.54,103.80,74.54,270.00,90.00,34.60,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W0,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W1,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W2,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W3,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W4,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W5,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W6,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W7,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W8,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W9,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W10,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W11,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W12,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F3:W13,Window,CONSTRUCTION1:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION1:F4,Floor,,CTF - ConductionTransferFunction,,10.000,2.915,,512.08,512.08,512.08,180.00,180.00,14.80,34.60,0.00,CONSTRUCTION2:F5,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer_Surface,CONSTRUCTION1:F5,Roof,,CTF - ConductionTransferFunction,,10.000,3.467,,512.08,512.08,512.08,90.00,0.00,34.60,14.80,0.00,CONSTRUCTION0:F4,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
+Zone_Surfaces,CONSTRUCTION2,   42
+HeatTransfer_Surface,CONSTRUCTION2:F0,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,33.95,44.40,33.95,180.00,90.00,14.80,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F0:W0,Window,CONSTRUCTION2:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F0:W1,Window,CONSTRUCTION2:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F0:W2,Window,CONSTRUCTION2:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F0:W3,Window,CONSTRUCTION2:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F0:W4,Window,CONSTRUCTION2:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,74.54,103.80,74.54,90.00,90.00,34.60,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W0,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W1,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W2,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W3,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W4,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W5,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W6,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W7,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W8,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W9,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W10,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W11,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W12,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F1:W13,Window,CONSTRUCTION2:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F2,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,38.13,44.40,38.13,0.00,90.00,14.80,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F2:W0,Window,CONSTRUCTION2:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F2:W1,Window,CONSTRUCTION2:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F2:W2,Window,CONSTRUCTION2:F2,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,0.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,74.54,103.80,74.54,270.00,90.00,34.60,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W0,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W1,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W2,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W3,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W4,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W5,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W6,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W7,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W8,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W9,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W10,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W11,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W12,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F3:W13,Window,CONSTRUCTION2:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION2:F4,Floor,,CTF - ConductionTransferFunction,,10.000,2.915,,512.08,512.08,512.08,180.00,180.00,14.80,34.60,0.00,CONSTRUCTION3:F5,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer_Surface,CONSTRUCTION2:F5,Roof,,CTF - ConductionTransferFunction,,10.000,3.467,,512.08,512.08,512.08,90.00,0.00,34.60,14.80,0.00,CONSTRUCTION1:F4,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
+Zone_Surfaces,CONSTRUCTION3,   43
+HeatTransfer_Surface,CONSTRUCTION3:F0,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,31.10,44.40,31.10,180.00,90.00,14.80,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F0:W0,Window,CONSTRUCTION3:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F0:W1,Window,CONSTRUCTION3:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F0:W2,Window,CONSTRUCTION3:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F0:W3,Window,CONSTRUCTION3:F0,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,180.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F0:W4,Window,CONSTRUCTION3:F0,Window5 Detailed Fenestration,,N/A,1.507,No,4.94,4.94,4.94,180.00,90.00,1.90,2.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,73.35,103.80,73.35,90.00,90.00,34.60,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W0,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,0.32,0.32,0.32,90.00,90.00,0.40,0.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W1,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,0.32,0.32,0.32,90.00,90.00,0.40,0.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W2,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W3,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W4,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W5,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W6,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W7,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W8,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W9,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W10,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W11,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W12,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W13,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W14,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.64,2.64,2.64,90.00,90.00,1.10,2.40,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F1:W15,Window,CONSTRUCTION3:F1,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,90.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F2,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,42.49,44.40,42.49,0.00,90.00,14.80,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F2:W0,Window,CONSTRUCTION3:F2,Window5 Detailed Fenestration,,N/A,1.507,No,1.43,1.43,1.43,0.00,90.00,1.10,1.30,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F2:W1,Window,CONSTRUCTION3:F2,Window5 Detailed Fenestration,,N/A,1.507,No,0.48,0.48,0.48,0.00,90.00,0.60,0.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3,Wall,,CTF - ConductionTransferFunction,,4.389,2.649,,74.54,103.80,74.54,270.00,90.00,34.60,3.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W0,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W1,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W2,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W3,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W4,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W5,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W6,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W7,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W8,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W9,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W10,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W11,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W12,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F3:W13,Window,CONSTRUCTION3:F3,Window5 Detailed Fenestration,,N/A,1.507,No,2.09,2.09,2.09,270.00,90.00,1.10,1.90,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer_Surface,CONSTRUCTION3:F4,Floor,,CTF - ConductionTransferFunction,,10.000,2.915,,512.08,512.08,512.08,180.00,180.00,14.80,34.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,NoSun,WindExposed,1.00,0.00,1.00,0.00,4
+HeatTransfer_Surface,CONSTRUCTION3:F5,Roof,,CTF - ConductionTransferFunction,,10.000,3.467,,512.08,512.08,512.08,90.00,0.00,34.60,14.80,0.00,CONSTRUCTION2:F4,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,ARCHSIM,WeatherFileRunPeriod,01/01,12/31,Sunday,365,UseWeatherFile,No,No,Yes,Yes,Yes
+Environment:Daylight Saving,Yes,InputFile,03/26,10/29
+! <Sky Daylight Factors>, MonthAndDay, Zone Name, Window Name, Daylight Fac: Ref Pt #1, Daylight Fac: Ref Pt #2
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W0,7.9081E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W0,8.7765E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W0,4.6560E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W0,2.0902E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W1,8.5996E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W1,9.6056E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W1,4.8337E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W1,2.1243E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W2,9.0051E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W2,1.0106E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W2,4.9175E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W2,2.1375E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W3,8.8095E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W3,9.8766E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W3,4.8597E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W3,2.1243E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W4,8.1685E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W4,9.1101E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W4,4.6928E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F0:W4,2.0902E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W0,3.3846E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W0,3.3046E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W0,2.6416E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W0,1.9639E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W1,1.1492E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W1,1.0144E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W1,9.0397E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W1,5.5535E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W2,1.0868E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W2,9.9245E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W2,8.3262E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W2,4.6920E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W3,6.3976E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W3,5.3806E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W3,4.1184E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W3,3.4943E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W4,3.9428E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W4,3.4526E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W4,2.7850E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W4,2.3596E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W5,3.7553E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W5,3.6960E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W5,2.8174E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W5,2.0176E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W6,1.0458E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W6,8.9141E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W6,7.7797E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W6,5.5879E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W7,8.7507E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W7,7.3567E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W7,6.0021E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W7,4.7485E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W8,5.0976E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W8,4.3445E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W8,3.3377E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W8,2.8618E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W9,3.4472E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W9,3.0780E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W9,2.5873E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W9,2.1646E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W10,5.5013E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W10,5.4587E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W10,3.7843E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W10,2.3454E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W11,8.8891E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W11,8.4935E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W11,6.3327E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W11,3.4509E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W12,7.2973E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W12,7.1369E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W12,5.0154E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W12,2.8334E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W13,4.5776E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W13,4.5421E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W13,3.2451E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F1:W13,2.1563E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W0,2.9074E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W0,2.2598E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W0,1.5714E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W0,2.1257E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W1,2.9148E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W1,2.2637E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W1,1.5672E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W1,2.1257E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W2,2.7242E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W2,2.1300E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W2,1.5360E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F2:W2,2.0747E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W0,3.1004E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W0,2.9445E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W0,2.4934E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W0,1.9639E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W1,4.1187E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W1,3.9664E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W1,3.0568E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W1,2.1563E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W2,6.4990E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W2,6.1662E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W2,4.7003E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W2,2.8334E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W3,1.0175E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W3,8.5055E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W3,7.2615E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W3,5.5880E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W4,5.0011E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W4,4.1587E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W4,3.1430E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W4,2.8619E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W5,3.2963E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W5,2.8679E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W5,2.4419E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W5,2.1646E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W6,3.4162E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W6,3.2674E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W6,2.6579E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W6,2.0176E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W7,4.9155E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W7,4.7306E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W7,3.5583E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W7,2.3454E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W8,9.9446E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W8,8.8652E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W8,7.7637E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W8,4.6921E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W9,3.8089E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W9,3.2508E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W9,2.6271E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W9,2.3596E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W10,6.3295E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W10,5.2013E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W10,3.8692E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W10,3.4944E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W11,7.9607E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W11,7.3910E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W11,5.9199E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W11,3.4510E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W12,1.0783E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W12,9.3249E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W12,8.4246E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W12,5.5536E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W13,8.6470E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W13,7.1191E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W13,5.6165E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION0,CONSTRUCTION0:F3:W13,4.7485E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W0,9.2971E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W0,1.0320E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W0,5.4282E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W0,2.4227E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W1,1.0182E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W1,1.1383E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W1,5.6536E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W1,2.4659E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W2,1.0705E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W2,1.2029E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W2,5.7602E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W2,2.4827E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W3,1.0454E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W3,1.1735E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W3,5.6870E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W3,2.4659E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W4,9.6325E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W4,1.0750E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W4,5.4752E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F0:W4,2.4227E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W0,3.9627E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W0,3.8793E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W0,3.0647E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W0,2.2629E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W1,6.5814E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W1,6.5471E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W1,4.4964E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W1,2.7434E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W2,1.0713E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W2,1.0247E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W2,7.6817E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W2,4.1363E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W3,8.7795E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W3,8.6013E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W3,6.0366E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W3,3.3582E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W4,1.3827E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W4,1.2201E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W4,1.1043E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W4,6.7815E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W5,1.3094E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W5,1.1959E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W5,1.0162E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W5,5.6987E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W6,1.0478E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W6,8.7931E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W6,7.2552E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W6,5.7696E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W7,1.2552E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W7,1.0686E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W7,9.4683E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W7,6.8247E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W8,6.0444E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W8,5.1340E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W8,3.9335E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W8,3.3941E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W9,4.0281E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W9,3.5857E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W9,2.9958E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W9,2.5155E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W10,4.4241E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W10,4.3669E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W10,3.2851E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W10,2.3304E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W11,5.4429E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W11,5.4164E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W11,3.8211E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W11,2.5050E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W12,7.6241E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W12,6.3943E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W12,4.9077E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W12,4.1910E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W13,4.6356E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W13,4.0451E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W13,3.2430E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F1:W13,2.7612E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W0,3.1927E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W0,2.4926E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W0,1.7794E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W0,2.4027E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W1,3.4294E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W1,2.6589E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W1,1.8188E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W1,2.4675E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W2,3.4203E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W2,2.6540E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W2,1.8240E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F2:W2,2.4675E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W0,3.6247E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W0,3.4510E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W0,2.8926E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W0,2.2629E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W1,7.8057E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W1,7.4172E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W1,5.6546E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W1,3.3582E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W2,1.1973E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W2,1.0675E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W2,9.4717E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W2,5.6988E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W3,1.0361E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W3,8.5172E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W3,6.7872E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W3,5.7697E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W4,1.2215E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W4,1.0201E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W4,8.8347E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W4,6.8249E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W5,7.5529E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W5,6.1909E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W5,4.6099E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W5,4.1910E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W6,3.8572E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W6,3.3459E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W6,2.8276E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W6,2.5155E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W7,4.0172E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W7,3.8527E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W7,3.0989E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W7,2.3304E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W8,5.8681E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W8,5.6605E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W8,4.2265E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W8,2.7434E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W9,4.8869E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W9,4.7187E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W9,3.5986E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W9,2.5050E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W10,9.5818E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W10,8.9038E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W10,7.1773E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W10,4.1363E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W11,1.2971E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W11,1.1212E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W11,1.0287E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W11,6.7816E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W12,5.9393E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W12,4.9234E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W12,3.7036E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W12,3.3941E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W13,4.4854E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W13,3.8153E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W13,3.0591E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION1,CONSTRUCTION1:F3:W13,2.7612E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W0,9.8352E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W0,1.0915E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W0,5.6442E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W0,2.4837E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W1,1.0920E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W1,1.2222E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W1,5.9184E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W1,2.5365E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W2,1.1567E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W2,1.3023E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W2,6.0487E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W2,2.5570E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W3,1.1259E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W3,1.2661E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W3,5.9597E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W3,2.5365E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W4,1.0249E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W4,1.1447E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W4,5.7019E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F0:W4,2.4837E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W0,5.9227E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W0,5.9293E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W0,4.0599E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W0,2.5807E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W1,1.2108E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W1,1.1601E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W1,8.6977E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W1,4.5602E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W2,1.5672E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W2,1.3808E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W2,1.2702E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W2,7.7660E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W3,1.4853E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W3,1.3563E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W3,1.1661E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W3,6.4550E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W4,1.1738E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W4,9.8039E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W4,8.1657E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W4,6.5409E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W5,4.9322E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W5,4.2673E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W5,3.3612E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W5,2.8914E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W6,4.7108E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W6,4.6792E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W6,3.4143E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W6,2.3690E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W7,6.5791E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W7,5.5415E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W7,4.1896E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W7,3.6594E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W8,4.1596E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W8,4.0957E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W8,3.1487E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W8,2.2872E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W9,7.2699E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W9,7.2687E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W9,4.8729E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W9,2.8697E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W10,9.8533E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W10,9.6842E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W10,6.7243E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W10,3.6159E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W11,1.4155E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W11,1.2013E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W11,1.0811E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W11,7.8183E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W12,8.4194E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W12,7.0113E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W12,5.3570E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W12,4.6266E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W13,4.2190E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W13,3.7274E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W13,3.0644E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F1:W13,2.5933E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W0,3.3660E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W0,2.6180E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W0,1.8239E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W0,2.4599E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W1,3.6477E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W1,2.8159E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W1,1.8715E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W1,2.5389E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W2,3.6368E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W2,2.8102E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W2,1.8777E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F2:W2,2.5389E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W0,6.4540E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W0,6.2549E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W0,4.5772E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W0,2.8697E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W1,5.2941E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W1,5.1405E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W1,3.8218E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W1,2.5807E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W2,8.7299E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W2,8.3191E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W2,6.2933E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W2,3.6159E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W3,1.4695E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W3,1.2686E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W3,1.1825E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W3,7.7662E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W4,4.0536E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W4,3.4903E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W4,2.8924E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W4,2.5933E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W5,1.3788E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W5,1.1482E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W5,1.0081E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W5,7.8185E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W6,6.4899E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W6,5.3380E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W6,3.9437E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W6,3.6594E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W7,8.3682E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W7,6.8153E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W7,5.0298E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W7,4.6267E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W8,3.7926E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W8,3.6306E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W8,2.9717E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W8,2.2871E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W9,4.2609E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W9,4.1105E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W9,3.2201E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W9,2.3690E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W10,1.0801E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W10,1.0051E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W10,8.1192E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W10,4.5603E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W11,1.3564E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W11,1.2089E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W11,1.0860E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W11,6.4551E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W12,1.1630E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W12,9.5205E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W12,7.6344E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W12,6.5410E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W13,4.7909E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W13,4.0418E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W13,3.1705E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION2,CONSTRUCTION2:F3:W13,2.8914E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W0,1.1700E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W0,1.3113E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W0,6.2055E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W0,2.6147E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W1,1.2476E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W1,1.4076E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W1,6.3603E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W1,2.6389E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W2,1.2110E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W2,1.3643E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W2,6.2552E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W2,2.6147E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W3,1.0906E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W3,1.2192E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W3,5.9502E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W3,2.5522E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W4,1.9612E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W4,2.1796E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W4,1.1900E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F0:W4,5.4710E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W0,4.8975E-005,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W0,4.5510E-005,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W0,4.1659E-005,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W0,3.3899E-005,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W1,4.9825E-005,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W1,4.6136E-005,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W1,4.1915E-005,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W1,3.4163E-005,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W2,4.3651E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W2,4.3209E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W2,3.2406E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W2,2.3167E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W3,5.0051E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W3,4.9995E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W3,3.5520E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W3,2.4132E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W4,1.3451E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W4,1.2911E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W4,9.7237E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W4,5.0009E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W5,1.0903E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W5,1.0747E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W5,7.4234E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W5,3.8855E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W6,1.7384E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W6,1.5306E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W6,1.4355E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W6,8.7807E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W7,1.6510E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W7,1.5081E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W7,1.3162E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W7,7.2366E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W8,1.2903E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W8,1.0743E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W8,9.0763E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W8,7.3379E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W9,1.5630E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W9,1.3238E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W9,1.2147E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W9,8.8422E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W10,7.0902E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W10,5.9333E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W10,4.4524E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W10,3.9369E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W11,9.1680E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W11,7.5950E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W11,5.8119E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W11,5.0793E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W12,4.4103E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W12,3.8711E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W12,3.1401E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W12,2.6779E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W13,5.2227E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W13,4.4867E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W13,3.4865E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W13,3.0298E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W14,5.7741E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W14,5.6697E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W14,4.2990E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W14,3.0067E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W15,7.9545E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W15,7.9886E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W15,5.2598E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F1:W15,3.0042E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F2:W0,1.9419E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F2:W0,1.5311E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F2:W0,1.1637E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F2:W0,1.5741E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F2:W1,9.4629E-005,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F2:W1,7.2555E-005,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F2:W1,4.6038E-005,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F2:W1,6.2320E-005,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W0,3.9670E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W0,3.8164E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W0,3.0573E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W0,2.3162E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W1,4.5098E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W1,4.3735E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W1,3.3483E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W1,2.4127E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W2,7.0340E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W2,6.8449E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W2,4.9365E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W2,3.0037E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W3,1.1972E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W3,1.1158E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W3,9.0687E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W3,5.0005E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W4,9.6298E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W4,9.2004E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W4,6.9410E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W4,3.8851E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W5,1.6290E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W5,1.4053E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W5,1.3354E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W5,8.7804E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W6,1.5058E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W6,1.3423E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W6,1.2247E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W6,7.2363E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W7,1.2799E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W7,1.0449E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W7,8.4809E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W7,7.3376E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W8,1.5229E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W8,1.2660E-003,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W8,1.1320E-003,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W8,8.8420E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W9,7.0138E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W9,5.7345E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W9,4.1894E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W9,3.9365E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W10,9.1329E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W10,7.4033E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W10,5.4541E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W10,5.0789E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W11,4.2485E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W11,3.6349E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W11,2.9632E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W11,2.6774E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W12,5.0882E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W12,4.2635E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W12,3.2878E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W12,3.0294E-004,0.0000
+ Clear Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W13,5.7022E-004,0.0000
+ Clear Turbid Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W13,5.5639E-004,0.0000
+ Intermediate Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W13,4.0527E-004,0.0000
+ Overcast Sky Daylight Factors,01/01,CONSTRUCTION3,CONSTRUCTION3:F3:W13,2.6625E-004,0.0000
+Environment:WarmupDays,  6
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,CONSTRUCTION0,RunPeriod: ARCHSIM,7.0018065420E-014,6.1519669674E-014,Pass,Pass,8.8545263532E-003,8.4752029009E-003,Pass,Pass
+ Warmup Convergence Information,CONSTRUCTION1,RunPeriod: ARCHSIM,7.9380946261E-014,5.7246361970E-014,Pass,Pass,1.1909344532E-002,1.1029936119E-002,Pass,Pass
+ Warmup Convergence Information,CONSTRUCTION2,RunPeriod: ARCHSIM,7.1979459430E-014,5.3765357613E-014,Pass,Pass,9.4286190068E-003,8.9403948773E-003,Pass,Pass
+ Warmup Convergence Information,CONSTRUCTION3,RunPeriod: ARCHSIM,1.1757261831E-013,7.7293771626E-014,Pass,Pass,4.8993972645E-003,4.6037495583E-003,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data

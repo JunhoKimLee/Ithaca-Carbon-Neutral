@@ -1,0 +1,15 @@
+inputs:
+all out.csv files
+cost of energy [$/kWh]
+cost of co2 [kg CO2/kWh]
+cost of implementing retrofits
+map of use-case to its retrofits
+base case
+
+outputs:
+energy per use case (total and by type) + delta
+for each retrofit, for each measured var: sensitivity analysis
+energy cost per use case (total and by type) + delta
+emissions cost per use case (total and by type) + delta
+retrofit cost per use case
+payback period
